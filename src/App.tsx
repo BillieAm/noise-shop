@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
 
-function App() {
+import Header from "./components/header/Header";
+import CategoriesContainer from "./components/categories-container/CategoriesContainer";
+import Footer from "./components/footer/Footer";
+
+function App(): JSX.Element {
+  const categories = [
+    {
+      id: 1,
+      name: "Effects",
+      imageUrl: ""
+    },
+    {
+      id: 2,
+      name: "Instruments",
+      imageUrl: ""
+    },
+    {
+      id: 3,
+      name: "Bundles",
+      imageUrl: ""
+    }
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <CategoriesContainer categories={categories} />
+      <Footer />
     </div>
   );
 }
