@@ -1,33 +1,21 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import Header from "./components/header/Header";
-import CategoriesContainer from "./components/categories-container/CategoriesContainer";
+import Navigation from "./routes/navigation/Navigation";
 import Footer from "./components/footer/Footer";
+import Home from "./routes/home/Home";
+import Shop from "./routes/shop/Shop";
 
 function App(): JSX.Element {
-  const categories = [
-    {
-      id: 1,
-      name: "Effects",
-      imageUrl: ""
-    },
-    {
-      id: 2,
-      name: "Instruments",
-      imageUrl: ""
-    },
-    {
-      id: 3,
-      name: "Bundles",
-      imageUrl: ""
-    }
-  ];
-
   return (
     <div className="App">
-      <Header />
-      <CategoriesContainer categories={categories} />
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />} />
+          <Route path="shop" element={<Shop />} />
+        </Route>
+      </Routes>
       <Footer />
     </div>
   );
