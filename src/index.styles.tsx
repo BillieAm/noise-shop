@@ -15,8 +15,14 @@ body{
   background-size: cover;
   height: 100vh;
   font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
+
+@media (min-width: 450px) {
+    body {
+      font-size: 1.7rem;
+    }
+  }
 
 a {
   text-decoration: none;

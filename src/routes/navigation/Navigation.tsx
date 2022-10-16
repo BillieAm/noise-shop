@@ -2,18 +2,32 @@ import React from "react";
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Outlet, Link } from "react-router-dom";
 
-import { NavigationContainer } from "./navigation.styles";
+import {
+  NavigationContainer,
+  LogoContainer,
+  NavLinks
+} from "./navigation.styles";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faMagnifyingGlass,
+  faUser,
+  faCartShopping
+} from "@fortawesome/free-solid-svg-icons";
 
 function Navigation(): JSX.Element {
   return (
     <>
       <NavigationContainer>
-        <Link className="Logo" to="/">
+        <LogoContainer to="/">
           <Logo />
-        </Link>
-        <div>
+        </LogoContainer>
+        <NavLinks>
           <Link to="/shop">Shop</Link>
-        </div>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <FontAwesomeIcon icon={faUser} />
+          <FontAwesomeIcon icon={faCartShopping} />
+        </NavLinks>
       </NavigationContainer>
       <Outlet />
     </>

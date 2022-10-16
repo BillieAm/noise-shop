@@ -9,7 +9,7 @@ import { AppContainer } from "./app.styles";
 
 function App(): JSX.Element {
   return (
-    <div>
+    <AppContainer>
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
@@ -17,7 +17,7 @@ function App(): JSX.Element {
         </Route>
       </Routes>
       <Footer />
-    </div>
+    </AppContainer>
   );
 }
 
