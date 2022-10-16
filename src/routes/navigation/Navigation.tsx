@@ -1,19 +1,20 @@
 import React from "react";
+import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Outlet, Link } from "react-router-dom";
+
+import { NavigationContainer } from "./navigation.styles";
 
 function Navigation(): JSX.Element {
   return (
     <>
-      <nav>
+      <NavigationContainer>
         <Link className="Logo" to="/">
-          Logo
+          <Logo />
         </Link>
-        <div className="nav-links-container">
-          <Link className="nav-link" to="/shop">
-            Shop
-          </Link>
+        <div>
+          <Link to="/shop">Shop</Link>
         </div>
-      </nav>
+      </NavigationContainer>
       <Outlet />
     </>
   );

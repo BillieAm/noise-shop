@@ -1,15 +1,15 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
 
 import Navigation from "./routes/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 import Home from "./routes/home/Home";
 import Shop from "./routes/shop/Shop";
+import { AppContainer } from "./app.styles";
 
 function App(): JSX.Element {
   return (
-    <div className="App">
+    <div>
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
