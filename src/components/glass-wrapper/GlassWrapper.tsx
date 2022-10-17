@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Glass } from "./glassContainer.styles";
+import { Glass } from "./glassWrapper.styles";
 
-function GlassContainer({
+function GlassWrapper({
   children
 }: {
   children: React.ReactNode;
@@ -10,4 +10,4 @@ function GlassContainer({
   return <Glass>{children}</Glass>;
 }
 
-export default GlassContainer;
+export default GlassWrapper;

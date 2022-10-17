@@ -1,10 +1,10 @@
 import React from "react";
 
-interface cat {
+interface categoryProps {
   category: { id: number; name: string; imageUrl: string };
 }
 
-function Category({ category }: cat): JSX.Element {
+function Category({ category }: categoryProps): JSX.Element {
   return <div>{category.name}</div>;
 }
 

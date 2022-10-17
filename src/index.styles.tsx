@@ -13,7 +13,7 @@ body{
   background-image: url(${background});
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   font-size: 1.2rem;
 }

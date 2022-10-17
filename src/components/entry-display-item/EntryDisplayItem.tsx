@@ -1,9 +1,15 @@
-import dials from "../../assets/entry/Dials-GUI-2x.jpeg";
+interface entryProps {
+  item: {
+    id: number;
+    name: string;
+    imageUrl: string;
+  };
+}
 
-function EntryDisplayItem(): JSX.Element {
+function EntryDisplayItem({ item }: entryProps): JSX.Element {
   return (
     <div>
-      <img src={dials} alt="Dials GUI 2x" />
+      <img src={item.imageUrl} alt="Dials GUI 2x" />
     </div>
   );
 }

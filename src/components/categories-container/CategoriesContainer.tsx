@@ -1,11 +1,25 @@
 import React from "react";
 import Category from "../category-item/CategoryItem";
 
-interface cat {
-  categories: { id: number; name: string; imageUrl: string }[];
-}
+function CategoriesContainer(): JSX.Element {
+  const categories = [
+    {
+      id: 1,
+      name: "Effects",
+      imageUrl: ""
+    },
+    {
+      id: 2,
+      name: "Instruments",
+      imageUrl: ""
+    },
+    {
+      id: 3,
+      name: "Bundles",
+      imageUrl: ""
+    }
+  ];
 
-function CategoriesContainer({ categories }: cat): JSX.Element {
   return (
     <div>
       CategoriesContainer
