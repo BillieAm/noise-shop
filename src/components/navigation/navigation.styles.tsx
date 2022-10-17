@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const NavigationContainer = styled.nav`
-  padding: 1em 0.5em;
+  padding: 1em 0.5em 1.5em;
   display: flex;
   justify-content: space-between;
 `;
@@ -17,8 +17,8 @@ export const NavLinks = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (min-width: 450px) {
-    width: 25%;
+  @media (min-width: 1280px) {
+    width: 12em;
   }
 `;
 

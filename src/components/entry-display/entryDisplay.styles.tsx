@@ -1,6 +1,14 @@
 import styled from "styled-components";
 
 export const DisplayWrapper = styled.div`
-  height: 75vh;
-  padding: 2em;
+  padding: 1em;
+  /* height: 75vh; */
+
+  img {
+    width: 80%;
+  }
+
+  @media (min-width: 770px) {
+    padding: 2em 5em;
+  }
 `;

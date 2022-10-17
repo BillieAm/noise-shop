@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import background from "./assets/milad-fakurian-medium.jpg";
+import background from "./assets/app-background.jpg";
 
 export default createGlobalStyle`
 *,

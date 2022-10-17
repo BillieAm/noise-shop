@@ -1,7 +1,6 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Navigation from "./routes/navigation/Navigation";
+import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 import Home from "./routes/home/Home";
 import Shop from "./routes/shop/Shop";

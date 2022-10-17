@@ -2,11 +2,11 @@ import React from "react";
 
 import { Glass } from "./glassContainer.styles";
 
-type childrenProps = {
-  children: React.ReactChild;
-};
-
-function GlassContainer({ children }: childrenProps): JSX.Element {
+function GlassContainer({
+  children
+}: {
+  children: React.ReactNode;
+}): JSX.Element {
   return <Glass>{children}</Glass>;
 }
 
