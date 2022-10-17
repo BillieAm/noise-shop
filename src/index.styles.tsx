@@ -18,6 +18,10 @@ body{
   font-size: 1.2rem;
 }
 
+img {
+  width: 100%;
+}
+
 @media (min-width: 450px) {
     body {
       font-size: 1.7rem;
