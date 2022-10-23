@@ -1,9 +1,9 @@
 import React from "react";
 
-import CategoriesContainer from "../../components/categories-container/CategoriesContainer";
+import CategoriesPreview from "../../components/categories-preview/CategoriesPreview";
 
 function Shop(): JSX.Element {
-  return <CategoriesContainer />;
+  return <CategoriesPreview />;
 }
 
 export default Shop;

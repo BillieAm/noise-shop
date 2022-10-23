@@ -9,7 +9,7 @@ interface entryProps {
 function EntryDisplayItem({ item }: entryProps): JSX.Element {
   return (
     <div>
-      <img src={item.imageUrl} alt="Dials GUI 2x" />
+      <img src={item.imageUrl} alt={item.name} />
     </div>
   );
 }

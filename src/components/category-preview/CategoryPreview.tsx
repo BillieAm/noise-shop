@@ -4,7 +4,7 @@ interface categoryProps {
   category: { id: number; name: string; imageUrl: string };
 }
 
-function Category({ category }: categoryProps): JSX.Element {
+function CategoryPreview({ category }: categoryProps): JSX.Element {
   return (
     <GlassWrapper>
       <img src={category.imageUrl} alt={category.name} />
@@ -12,4 +12,4 @@ function Category({ category }: categoryProps): JSX.Element {
   );
 }
 
-export default Category;
+export default CategoryPreview;
