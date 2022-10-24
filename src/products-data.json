@@ -3,54 +3,63 @@
     "id": 1,
     "name": "Alborosie Dub Station",
     "imageUrl": "/assets/product/AlborosieDubStation-GUI_2x.jpg",
-    "price": 25
+    "price": 25,
+    "category": "effects"
   },
   {
     "id": 2,
     "name": "Alborosie Dub Station",
     "imageUrl": "/assets/product/AlborosieDubStation-GUI_2x.jpg",
-    "price": 18
+    "price": 18,
+    "category": "instruments"
   },
   {
     "id": 3,
     "name": "Alborosie Dub Station",
     "imageUrl": "/assets/product/AlborosieDubStation-GUI_2x.jpg",
-    "price": 35
+    "price": 35,
+    "category": "effects"
   },
   {
     "id": 4,
     "name": "Alborosie Dub Station",
     "imageUrl": "/assets/product/AlborosieDubStation-GUI_2x.jpg",
-    "price": 25
+    "price": 25,
+    "category": "instruments"
   },
   {
     "id": 5,
     "name": "Alborosie Dub Station",
     "imageUrl": "/assets/product/AlborosieDubStation-GUI_2x.jpg",
-    "price": 18
+    "price": 18,
+    "category": "bundle"
   },
   {
     "id": 6,
     "name": "Alborosie Dub Station",
     "imageUrl": "/assets/product/AlborosieDubStation-GUI_2x.jpg",
-    "price": 14
+    "price": 14,
+    "category": "instruments"
   },
   {
     "id": 7,
     "name": "Alborosie Dub Station",
     "imageUrl": "/assets/product/AlborosieDubStation-GUI_2x.jpg",
-    "price": 18
+    "price": 18,
+    "category": "effects"
   },
   {
     "id": 8,
     "name": "Alborosie Dub Station",
     "imageUrl": "/assets/product/AlborosieDubStation-GUI_2x.jpg",
-    "price": 14
+    "price": 14,
+    "category": "effects"
   },
   {
     "id": 9,
     "name": "Alborosie Dub Station",
     "imageUrl": "/assets/product/AlborosieDubStation-GUI_2x.jpg",
-    "price": 16
+    "price": 16,
+    "category": "bundle"
   }
 ]

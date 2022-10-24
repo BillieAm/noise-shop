@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
+import { ProductsProvider } from "./contexts/products.context";
+
 import GlobalStyle from "./index.styles";
 import App from "./App";
 
@@ -12,7 +14,9 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <GlobalStyle />
-      <App />
+      <ProductsProvider>
+        <App />
+      </ProductsProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
