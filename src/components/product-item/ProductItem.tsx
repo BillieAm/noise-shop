@@ -1,5 +1,7 @@
 import React from "react";
 
+import Button from "../button/Button";
+
 import { IProduct } from "../../types/shop";
 
 type ProductProps = {
@@ -13,7 +15,8 @@ function ProductItem({ product }: ProductProps): JSX.Element {
   return (
     <div>
       <h3>{name}</h3>
-      <img src={`../../${imageUrl}`} alt={name} />
+      <img src={imageUrl} alt={name} />
+      <Button>Add</Button>
     </div>
   );
 }
