@@ -2,15 +2,7 @@ import React, { createContext } from "react";
 
 import PRODUCTS from "../products-data.json";
 
-type Product = {
-  id: number;
-  name: string;
-  imageUrl: string;
-  price: number;
-  category: string;
-};
-
-type ProductContextType = Product[];
+import { ProductContextType } from "../types/shop";
 
 const ProductsContext = createContext<ProductContextType | []>([]);
 
