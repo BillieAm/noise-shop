@@ -2,7 +2,6 @@ import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Outlet, Link } from "react-router-dom";
 
 import CartIcon from "../../components/cart-icon/CartIcon";
-import CartDropdown from "../../components/cart-dropdown/CartDropdown";
 
 import {
   NavigationContainer,
@@ -26,7 +25,6 @@ function Navigation(): JSX.Element {
           <FontAwesomeIcon icon={faUser} />
           <CartIcon />
         </NavLinks>
-        <CartDropdown />
       </NavigationContainer>
       <Outlet />
     </>

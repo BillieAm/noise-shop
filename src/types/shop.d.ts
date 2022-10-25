@@ -7,3 +7,8 @@ export interface IProduct {
 }
 
 export type ProductContextType = IProduct[];
+
+export interface CartContextType {
+  isCartOpen: boolean;
+  setIsCartOpen: () => {};
+}
