@@ -5,10 +5,15 @@ export interface IProduct {
   price: number;
   category: string;
 }
-
-export type ProductContextType = IProduct[];
-
-export interface CartContextType {
-  isCartOpen: boolean;
-  setIsCartOpen: () => {};
+export interface ICartItem extends IProduct {
+  quantity: number;
 }
+
+export type CartContextType = {
+  cartItems: ICartItem[];
+  addItemToCart(productToAdd: IProduct): void;
+};
+
+/* 
+{id: 3, name: "abc", imageUrl: "hello", price: 34, category: "bundles", quantity: 2}
+*/

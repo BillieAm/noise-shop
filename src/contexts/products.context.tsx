@@ -2,9 +2,9 @@ import React, { createContext } from "react";
 
 import PRODUCTS from "../products-data.json";
 
-import { ProductContextType } from "../types/shop";
+import { IProduct } from "../types/shop";
 
-const ProductsContext = createContext<ProductContextType | []>([]);
+const ProductsContext = createContext<IProduct[] | []>([]);
 
 function ProductsProvider({ children }: { children: React.ReactNode }) {
   return (
