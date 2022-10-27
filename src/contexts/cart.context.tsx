@@ -16,7 +16,7 @@ const addCartItem = (cartItemsArr: ICartItem[], product: IProduct) => {
   return [...cartItemsArr, { ...product, quantity: 1 }];
 };
 
-const CartContext = createContext<CartContextType | {}>({});
+const CartContext = createContext<CartContextType | null>(null);
 
 function CartProvider({ children }: { children: React.ReactNode }) {
   const [cartItems, setCartItems] = useState<ICartItem[]>([]);
