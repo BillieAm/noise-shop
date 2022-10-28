@@ -1,18 +1,7 @@
-import { useContext } from "react";
-import { ProductsContext } from "../../contexts/products.context";
-
-import ProductItem from "../../components/product-item/ProductItem";
+import ProductsContainer from "../../components/products-container/ProductsContainer";
 
 function Category(): JSX.Element {
-  const products = useContext(ProductsContext);
-
-  return (
-    <div>
-      {products.map(product => (
-        <ProductItem key={product.id} product={product} />
-      ))}
-    </div>
-  );
+  return <ProductsContainer />;
 }
 
 export default Category;
