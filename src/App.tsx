@@ -5,6 +5,8 @@ import Footer from "./components/footer/Footer";
 import Home from "./routes/home/Home";
 import Shop from "./routes/shop/Shop";
 import Category from "./routes/category/Category";
+import Checkout from "./routes/checkout/Checkout";
+
 import { AppContainer } from "./app.styles";
 
 function App(): JSX.Element {
@@ -16,6 +18,7 @@ function App(): JSX.Element {
           <Route path="shop" element={<Shop />}>
             <Route path="category" element={<Category />} />
           </Route>
+          <Route path="checkout" element={<Checkout />} />
         </Route>
       </Routes>
       <Footer />

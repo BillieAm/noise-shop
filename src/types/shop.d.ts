@@ -11,7 +11,9 @@ export interface ICartItem extends IProduct {
 
 export type CartContextType = {
   cartItems: ICartItem[];
-  addItemToCart(productToAdd: IProduct): void;
+  addItemToCart(productToAdd: IProduct | ICartItem): void;
+  subtractCartItem(cartItem: ICartItem): void;
+  removeItemFromCheckout(cartItemToRemove: ICartItem): void;
 };
 
 /* 
