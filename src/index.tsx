@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import { ProductsProvider } from "./contexts/products.context";
+import { CategoriesProvider } from "./contexts/categories.context";
 import { CartProvider } from "./contexts/cart.context";
 
 import GlobalStyle from "./index.styles";
@@ -15,11 +15,11 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <GlobalStyle />
-      <ProductsProvider>
+      <CategoriesProvider>
         <CartProvider>
           <App />
         </CartProvider>
-      </ProductsProvider>
+      </CategoriesProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

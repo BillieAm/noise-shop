@@ -1,16 +1,16 @@
 import { useContext } from "react";
-import { ProductsContext } from "../../contexts/products.context";
+import { CategoriesContext } from "../../contexts/categories.context";
 
 import ProductItem from "../product-item/ProductItem";
 
 function ProductsContainer(): JSX.Element {
-  const products = useContext(ProductsContext);
+  const categories = useContext(CategoriesContext);
 
   return (
     <div>
-      {products.map(product => (
+      {/* {categories.map(category => (
         <ProductItem key={product.id} product={product} />
-      ))}
+      ))} */}
     </div>
   );
 }

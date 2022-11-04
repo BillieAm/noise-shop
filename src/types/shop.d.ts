@@ -1,9 +1,10 @@
 export interface IProduct {
   id: number;
   name: string;
+  subtitle: string;
+  description: string;
   imageUrl: string;
   price: number;
-  category: string;
 }
 export interface ICartItem extends IProduct {
   quantity: number;
@@ -14,6 +15,11 @@ export type CartContextType = {
   addItemToCart(productToAdd: IProduct | ICartItem): void;
   subtractCartItem(cartItem: ICartItem): void;
   removeItemFromCheckout(cartItemToRemove: ICartItem): void;
+};
+
+export type Category = {
+  title: string;
+  items: IProduct[];
 };
 
 /* 
