@@ -1,33 +1,30 @@
+import { useContext } from "react";
+
+import { CategoriesContext } from "../../contexts/categories.context";
+
 import GlassWrapper from "../glass-wrapper/GlassWrapper";
 import EntryDisplayItem from "../entry-display-item/EntryDisplayItem";
 
 import { DisplayWrapper } from "./entryDisplay.styles";
 
 function EntryDisplay(): JSX.Element {
-  const entryItems = [
-    {
-      id: 1,
-      name: "Dials",
-      imageUrl: "https://iili.io/by7JLb.jpg"
-    },
-    {
-      id: 2,
-      name: "The Orb",
-      imageUrl: "https://iili.io/byc2Bs.jpg"
-    },
-    {
-      id: 3,
-      name: "Vinyl Strip",
-      imageUrl: "https://iili.io/bylncv.jpg"
-    }
-  ];
+  const categories = useContext(CategoriesContext);
+  console.log(categories);
 
   return (
     <DisplayWrapper>
       <GlassWrapper>
-        {entryItems.map(item => (
-          <EntryDisplayItem key={item.id} item={item} />
-        ))}
+        {categories.map(category => {
+          const randIdx: number = Math.floor(
+            Math.random() * category.items.length
+          );
+          return (
+            <EntryDisplayItem
+              key={category.title}
+              product={category.items[randIdx]}
+            />
+          );
+        })}
       </GlassWrapper>
     </DisplayWrapper>
   );

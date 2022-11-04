@@ -4,7 +4,6 @@ import Navigation from "./routes/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 import Home from "./routes/home/Home";
 import Shop from "./routes/shop/Shop";
-import Category from "./routes/category/Category";
 import Checkout from "./routes/checkout/Checkout";
 
 import { AppContainer } from "./app.styles";
@@ -15,9 +14,7 @@ function App(): JSX.Element {
       <Routes>
         <Route path="/" element={<Navigation />}>
           <Route index element={<Home />} />
-          <Route path="shop" element={<Shop />}>
-            <Route path="category" element={<Category />} />
-          </Route>
+          <Route path="shop/*" element={<Shop />} />
           <Route path="checkout" element={<Checkout />} />
         </Route>
       </Routes>

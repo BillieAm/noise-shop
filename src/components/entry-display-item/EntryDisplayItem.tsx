@@ -1,15 +1,10 @@
-interface entryProps {
-  item: {
-    id: number;
-    name: string;
-    imageUrl: string;
-  };
-}
+import { IProduct } from "../../types/shop";
 
-function EntryDisplayItem({ item }: entryProps): JSX.Element {
+function EntryDisplayItem({ product }: { product: IProduct }): JSX.Element {
   return (
     <div>
-      <img src={item.imageUrl} alt={item.name} />
+      <h2>{product.name}</h2>
+      <img src={product.imageUrl} alt={product.name} />
     </div>
   );
 }
