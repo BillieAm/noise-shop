@@ -1,7 +1,7 @@
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-import CartIcon from "../../components/cart-icon/CartIcon";
+import CartIcon from "../cart-icon/CartIcon";
 
 import {
   NavigationContainer,
@@ -26,7 +26,6 @@ function Navigation(): JSX.Element {
           <CartIcon />
         </NavLinks>
       </NavigationContainer>
-      <Outlet />
     </>
   );
 }
