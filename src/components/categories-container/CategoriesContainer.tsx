@@ -5,21 +5,21 @@ import effects from "../../assets/categories/effects.png";
 import instruments from "../../assets/categories/instruments.png";
 import bundles from "../../assets/categories/bundles.png";
 
-function CategoriesPreview(): JSX.Element {
+function CategoriesContainer(): JSX.Element {
   const categories = [
     {
       id: 1,
-      name: "Effects",
+      name: "effects",
       imageUrl: effects
     },
     {
       id: 2,
-      name: "Instruments",
+      name: "instruments",
       imageUrl: instruments
     },
     {
       id: 3,
-      name: "Bundles",
+      name: "bundles",
       imageUrl: bundles
     }
   ];
@@ -35,4 +35,4 @@ function CategoriesPreview(): JSX.Element {
   );
 }
 
-export default CategoriesPreview;
+export default CategoriesContainer;
