@@ -6,12 +6,7 @@ import Button from "../button/Button";
 
 import { IProduct, CartContextType } from "../../types/shop";
 
-type ProductProps = {
-  key: number;
-  product: IProduct;
-};
-
-function ProductItem({ product }: ProductProps): JSX.Element {
+function ProductItem({ product }: { product: IProduct }): JSX.Element {
   const { name, imageUrl } = product;
   const { addItemToCart } = useContext(CartContext) as CartContextType;
 
