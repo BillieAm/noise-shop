@@ -1,34 +1,17 @@
-import CategoryPreview from "../category-preview/CategoryPreview";
+import { useContext } from "react";
+import { CategoriesContext } from "../../contexts/categories.context";
+
+import CategoryItem from "../category-item/CategoryItem";
 import GlassWrapper from "../glass-wrapper/GlassWrapper";
 
-import effects from "../../assets/categories/effects.png";
-import instruments from "../../assets/categories/instruments.png";
-import bundles from "../../assets/categories/bundles.png";
-
 function CategoriesContainer(): JSX.Element {
-  const categories = [
-    {
-      id: 1,
-      name: "effects",
-      imageUrl: effects
-    },
-    {
-      id: 2,
-      name: "instruments",
-      imageUrl: instruments
-    },
-    {
-      id: 3,
-      name: "bundles",
-      imageUrl: bundles
-    }
-  ];
+  const categories = useContext(CategoriesContext);
 
   return (
     <div>
       <GlassWrapper>
         {categories.map(category => (
-          <CategoryPreview key={category.id} category={category} />
+          <CategoryItem key={category.title} category={category} />
         ))}
       </GlassWrapper>
     </div>

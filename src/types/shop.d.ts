@@ -20,6 +20,7 @@ export type CartContextType = {
 export type Category = {
   title: string;
   items: IProduct[];
+  image: string;
 };
 
 /* 
