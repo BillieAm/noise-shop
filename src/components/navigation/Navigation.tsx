@@ -1,10 +1,10 @@
-import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
 
 import CartIcon from "../cart-icon/CartIcon";
 
 import {
   NavigationContainer,
+  StyledLogo,
   LogoContainer,
   NavLinks
 } from "./navigation.styles";
@@ -17,7 +17,7 @@ function Navigation(): JSX.Element {
     <>
       <NavigationContainer>
         <LogoContainer to="/">
-          <Logo />
+          <StyledLogo />
         </LogoContainer>
         <NavLinks>
           <Link to="/shop">Shop</Link>
