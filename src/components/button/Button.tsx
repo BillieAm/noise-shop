@@ -1,12 +1,14 @@
 import React from "react";
 
+import { CustomButton } from "./button.styles";
+
 type ButtonProps = {
-  children?: React.ReactNode;
-  onClick?: () => void;
+  children: React.ReactNode;
+  onClick?: React.MouseEventHandler;
 };
 
-function Button({ children, onClick }: ButtonProps): JSX.Element {
-  return <button onClick={onClick}>{children}</button>;
+function Button({ children, ...restProps }: ButtonProps): JSX.Element {
+  return <CustomButton {...restProps}>{children}</CustomButton>;
 }
 
 export default Button;

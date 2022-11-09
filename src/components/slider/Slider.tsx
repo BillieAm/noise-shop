@@ -21,7 +21,7 @@ function Slider(): JSX.Element {
     setSlides(randomItems(categories));
   }, [categories]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     const interval = setInterval(() => {
       if (currentIdx === slides.length - 1) {
         setCurrentIdx(0);
@@ -33,7 +33,7 @@ function Slider(): JSX.Element {
     return () => {
       clearInterval(interval);
     };
-  });
+  }); */
 
   const currentSlide = slides.find((_, index) => index === currentIdx);
 
@@ -43,14 +43,12 @@ function Slider(): JSX.Element {
 
   return (
     <SliderWrapper>
-      <GlassWrapper>
-        {currentSlide && <SliderItem slideItem={currentSlide} />}
-        {slides.map((slide, index) => (
-          <span key={slide.id} onClick={() => changeSlideHandle(index)}>
-            ●
-          </span>
-        ))}
-      </GlassWrapper>
+      {currentSlide && <SliderItem slideItem={currentSlide} />}
+      {slides.map((slide, index) => (
+        <span key={slide.id} onClick={() => changeSlideHandle(index)}>
+          ●
+        </span>
+      ))}
     </SliderWrapper>
   );
 }

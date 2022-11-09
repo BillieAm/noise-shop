@@ -9,11 +9,9 @@ function CategoriesContainer(): JSX.Element {
 
   return (
     <div>
-      <GlassWrapper>
-        {categories.map(category => (
-          <CategoryItem key={category.title} category={category} />
-        ))}
-      </GlassWrapper>
+      {categories.map(category => (
+        <CategoryItem key={category.title} category={category} />
+      ))}
     </div>
   );
 }

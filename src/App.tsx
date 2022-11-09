@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./routes/home/Home";
 import Shop from "./routes/shop/Shop";
 import Checkout from "./routes/checkout/Checkout";
+import GlassWrapper from "./components/glass-wrapper/GlassWrapper";
 
 import { AppContainer } from "./app.styles";
 
@@ -12,11 +13,13 @@ function App(): JSX.Element {
   return (
     <AppContainer>
       <Navigation />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="shop/*" element={<Shop />} />
-        <Route path="checkout" element={<Checkout />} />
-      </Routes>
+      <GlassWrapper>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="shop/*" element={<Shop />} />
+          <Route path="checkout" element={<Checkout />} />
+        </Routes>
+      </GlassWrapper>
       <Footer />
     </AppContainer>
   );
