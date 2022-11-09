@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const DisplayWrapper = styled.div`
+export const SliderWrapper = styled.div`
   flex: 1;
 
   img {

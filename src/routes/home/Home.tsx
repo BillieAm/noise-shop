@@ -1,9 +1,9 @@
 import React from "react";
 
-import EntryDisplay from "../../components/entry-display/EntryDisplay";
+import Slider from "../../components/slider/Slider";
 
 function Home(): JSX.Element {
-  return <EntryDisplay />;
+  return <Slider />;
 }
 
 export default Home;
