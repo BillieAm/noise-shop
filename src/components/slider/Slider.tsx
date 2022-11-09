@@ -21,6 +21,20 @@ function Slider(): JSX.Element {
     setSlides(randomItems(categories));
   }, [categories]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentIdx === slides.length - 1) {
+        setCurrentIdx(0);
+      } else {
+        setCurrentIdx(currentIdx + 1);
+      }
+    }, 4000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  });
+
   const currentSlide = slides.find((_, index) => index === currentIdx);
 
   const changeSlideHandle = (itemIdx: number) => {
