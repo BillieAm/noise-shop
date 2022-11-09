@@ -4,8 +4,8 @@ import { CategoriesContext } from "../../contexts/categories.context";
 
 import { IProduct } from "../../types/shop";
 
-import GlassWrapper from "../glass-wrapper/GlassWrapper";
 import SliderItem from "../slider-item/SliderItem";
+import SliderDot from "../slider-dot/SliderDot";
 
 import randomItems from "../../utils/random-items/randomItems";
 
@@ -44,11 +44,11 @@ function Slider(): JSX.Element {
   return (
     <SliderWrapper>
       {currentSlide && <SliderItem slideItem={currentSlide} />}
-      {slides.map((slide, index) => (
-        <span key={slide.id} onClick={() => changeSlideHandle(index)}>
-          ●
-        </span>
-      ))}
+      <div>
+        {slides.map((slide, index) => (
+          <SliderDot key={slide.id} onClick={() => changeSlideHandle(index)} />
+        ))}
+      </div>
     </SliderWrapper>
   );
 }

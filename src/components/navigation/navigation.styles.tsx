@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import { device } from "../../device";
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
