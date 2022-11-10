@@ -1,10 +1,14 @@
 import styled from "styled-components/macro";
 
 export const BaseButton = styled.button`
-  padding: 1em;
-  background-color: yellow;
+  font-weight: 700;
+  padding: 0.5em 1.5em;
+  background-color: hsl(var(--clr-yellow));
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
 `;
 
 export const BuyButton = styled(BaseButton)`
-  background-color: orange;
+  background-color: hsl(var(--clr-turquoise));
 `;

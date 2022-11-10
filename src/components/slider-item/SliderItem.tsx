@@ -8,7 +8,7 @@ function SliderItem({ slideItem }: { slideItem: IProduct }): JSX.Element {
       <h2>{slideItem.name}</h2>
       <img src={slideItem.imageUrl} alt={slideItem.name} />
       <Button
-        buttonType={BUTTON_TYPE_CLASSES.buy}
+        buttonType={BUTTON_TYPE_CLASSES.base}
         onClick={() => console.log("clicked")}
       >
         Learn More
