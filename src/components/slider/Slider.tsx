@@ -6,10 +6,11 @@ import { IProduct } from "../../types/shop";
 
 import SliderItem from "../slider-item/SliderItem";
 import SliderDot from "../slider-dot/SliderDot";
+import MobileEntry from "../mobile/mobile-entry/MobileEntry";
 
 import randomItems from "../../utils/random-items/randomItems";
 
-import { SliderWrapper } from "./slider.styles";
+import { MobileEntryWrapper, SliderWrapper } from "./slider.styles";
 
 function Slider(): JSX.Element {
   const categories = useContext(CategoriesContext);
@@ -42,14 +43,25 @@ function Slider(): JSX.Element {
   };
 
   return (
-    <SliderWrapper>
-      {currentSlide && <SliderItem slideItem={currentSlide} />}
-      <div>
-        {slides.map((slide, index) => (
-          <SliderDot key={slide.id} onClick={() => changeSlideHandle(index)} />
+    <>
+      <MobileEntryWrapper>
+        {slides.map(item => (
+          <MobileEntry item={item} key={item.id} />
         ))}
-      </div>
-    </SliderWrapper>
+      </MobileEntryWrapper>
+
+      <SliderWrapper>
+        {currentSlide && <SliderItem slideItem={currentSlide} />}
+        <div>
+          {slides.map((slide, index) => (
+            <SliderDot
+              key={slide.id}
+              onClick={() => changeSlideHandle(index)}
+            />
+          ))}
+        </div>
+      </SliderWrapper>
+    </>
   );
 }
 
