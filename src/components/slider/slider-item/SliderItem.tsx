@@ -1,6 +1,6 @@
-import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
+import Button, { BUTTON_TYPE_CLASSES } from "../../button/Button";
 
-import { IProduct } from "../../types/shop";
+import { IProduct } from "../../../types/shop";
 
 function SliderItem({ slideItem }: { slideItem: IProduct }): JSX.Element {
   return (

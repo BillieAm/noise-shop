@@ -2,7 +2,7 @@ import React from "react";
 
 import { EntryItemWrapper } from "./mobileEntry.styles";
 
-import { IProduct } from "../../../types/shop";
+import { IProduct } from "../../../../types/shop";
 
 function MobileEntry({ item }: { item: IProduct }): JSX.Element {
   return (

@@ -1,18 +1,18 @@
 import { useContext, useState, useEffect } from "react";
 
-import { CategoriesContext } from "../../contexts/categories.context";
+import { CategoriesContext } from "../../../contexts/categories.context";
 
-import { IProduct } from "../../types/shop";
+import { IProduct } from "../../../types/shop";
 
 import SliderItem from "../slider-item/SliderItem";
 import SliderDot from "../slider-dot/SliderDot";
 import MobileEntry from "../mobile/mobile-entry/MobileEntry";
 
-import randomItems from "../../utils/random-items/randomItems";
+import randomItems from "../../../utils/random-items/randomItems";
 
-import { MobileEntryWrapper, SliderWrapper } from "./slider.styles";
+import { MobileEntryWrapper, SliderWrapper } from "./sliderContainer.styles";
 
-function Slider(): JSX.Element {
+function SliderContainer(): JSX.Element {
   const categories = useContext(CategoriesContext);
   const [slides, setSlides] = useState<IProduct[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
@@ -65,4 +65,4 @@ function Slider(): JSX.Element {
   );
 }
 
-export default Slider;
+export default SliderContainer;

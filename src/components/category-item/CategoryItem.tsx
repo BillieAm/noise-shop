@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import GlassWrapper from "../glass-wrapper/GlassWrapper";
+import GlassWrapper from "../containers/glass-wrapper/GlassWrapper";
 
 import { Category } from "../../types/shop";
 

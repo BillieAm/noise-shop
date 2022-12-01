@@ -1,9 +1,9 @@
 import React from "react";
 
-import Slider from "../../components/slider/Slider";
+import SliderContainer from "../../components/slider/slider-container/SliderContainer";
 
 function Home(): JSX.Element {
-  return <Slider />;
+  return <SliderContainer />;
 }
 
 export default Home;

@@ -5,7 +5,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./routes/home/Home";
 import Shop from "./routes/shop/Shop";
 import Checkout from "./routes/checkout/Checkout";
-import GlassWrapper from "./components/glass-wrapper/GlassWrapper";
+import GlassWrapper from "./components/containers/glass-wrapper/GlassWrapper";
 
 import { AppContainer } from "./app.styles";
 
