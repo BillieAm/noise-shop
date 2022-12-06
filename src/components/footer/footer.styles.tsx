@@ -20,9 +20,10 @@ export const Newsletter = styled.div`
   font-size: var(--fs-300);
 
   ${BaseButton} {
-    background-color: hsl(var(--clr-light-yellow));
-    padding: 0.4em 1em;
-    border: 1px solid black;
+    background-color: hsl(var(--clr-purple));
+    padding: 0.2em 0.7em;
+    font-weight: 400;
+    border: 1.5px solid black;
     border-radius: 2px;
   }
 `;

@@ -7,6 +7,7 @@ export const BaseButton = styled.button`
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  text-transform: capitalize;
 `;
 
 export const BuyButton = styled(BaseButton)`
