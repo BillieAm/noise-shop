@@ -20,7 +20,7 @@ export const Newsletter = styled.div`
   font-size: var(--fs-300);
 
   ${BaseButton} {
-    background-color: hsl(var(--clr-purple));
+    background-color: hsl(var(--clr-pink));
     padding: 0.2em 0.7em;
     font-weight: 400;
     border: 1.5px solid black;
