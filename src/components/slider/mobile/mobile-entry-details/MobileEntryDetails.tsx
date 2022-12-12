@@ -1,15 +1,14 @@
 import Button from "../../../button/Button";
-
-import { DetailsBox } from "./mobileEntryDetails.styles";
+import GlassWrapper from "../../../containers/glass-wrapper/GlassWrapper";
 
 import { IProduct } from "../../../../types/shop";
 
 function MobileEntryDetails({ item }: { item: IProduct }): JSX.Element {
   return (
-    <DetailsBox>
-      <h4>{item.name}</h4>
+    <GlassWrapper glassType="details">
+      <h2>{item.name}</h2>
       <Button>learn more</Button>
-    </DetailsBox>
+    </GlassWrapper>
   );
 }
 

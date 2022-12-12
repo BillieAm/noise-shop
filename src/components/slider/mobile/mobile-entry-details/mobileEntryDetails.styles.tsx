@@ -1,8 +1,4 @@
 import styled from "styled-components/macro";
+import { GlassDetailsBox } from "../../../containers/glass-wrapper/glassWrapper.styles";
 
-export const DetailsBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: hsl(var(--clr-turquoise));
-`;
+export const DetailsBox = styled(GlassDetailsBox)``;

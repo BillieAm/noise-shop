@@ -13,7 +13,9 @@ export default createGlobalStyle`
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
+  --clr-red: 0 100% 50%;
   --clr-light-yellow: 60 100% 50%;
+  --clr-green: 145 63% 49%;
   --clr-peach-pink: 0 100% 76%;
   --clr-pink: 289 84% 78%;
   --clr-yellow: 45 100% 61%;
