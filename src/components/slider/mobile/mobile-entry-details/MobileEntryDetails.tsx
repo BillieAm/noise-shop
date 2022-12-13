@@ -6,7 +6,7 @@ import { IProduct } from "../../../../types/shop";
 function MobileEntryDetails({ item }: { item: IProduct }): JSX.Element {
   return (
     <GlassWrapper glassType="details">
-      <h2>{item.name}</h2>
+      <h3>{item.name}</h3>
       <Button>learn more</Button>
     </GlassWrapper>
   );
