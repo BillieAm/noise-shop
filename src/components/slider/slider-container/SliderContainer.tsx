@@ -6,7 +6,6 @@ import { IProduct } from "../../../types/shop";
 
 import SliderItem from "../slider-item/SliderItem";
 import SliderDot from "../slider-dot/SliderDot";
-import MobileEntry from "../mobile/mobile-entry/MobileEntry";
 
 import randomItems from "../../../utils/random-items/randomItems";
 
@@ -46,12 +45,12 @@ function SliderContainer(): JSX.Element {
     <>
       <MobileEntryWrapper>
         {slides.map(item => (
-          <MobileEntry item={item} key={item.id} />
+          <SliderItem item={item} key={item.id} />
         ))}
       </MobileEntryWrapper>
 
       <SliderWrapper>
-        {currentSlide && <SliderItem slideItem={currentSlide} />}
+        {currentSlide && <SliderItem item={currentSlide} />}
         <div>
           {slides.map((slide, index) => (
             <SliderDot

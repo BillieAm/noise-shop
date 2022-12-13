@@ -1,19 +1,15 @@
-import Button, { BUTTON_TYPE_CLASSES } from "../../button/Button";
+import SliderItemDetails from "../slider-item-details/SliderItemDetails";
+
+import { ItemWrapper } from "./sliderItem.styles";
 
 import { IProduct } from "../../../types/shop";
 
-function SliderItem({ slideItem }: { slideItem: IProduct }): JSX.Element {
+function SliderItem({ item }: { item: IProduct }): JSX.Element {
   return (
-    <div>
-      <h2>{slideItem.name}</h2>
-      <img src={slideItem.imageUrl} alt={slideItem.name} />
-      <Button
-        buttonType={BUTTON_TYPE_CLASSES.base}
-        onClick={() => console.log("clicked")}
-      >
-        Learn More
-      </Button>
-    </div>
+    <ItemWrapper>
+      <img src={item.imageUrl} alt={item.name} />
+      <SliderItemDetails item={item} />
+    </ItemWrapper>
   );
 }
 
