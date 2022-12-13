@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import { DEVISES, FONT_SIZES, COLORS } from "../../constants";
 import { BaseButton } from "../button/button.styles";
 
 export const FooterContainer = styled.footer`
@@ -17,10 +18,14 @@ export const Newsletter = styled.div`
   display: flex;
   gap: 1em;
   align-items: center;
-  font-size: var(--fs-300);
+  font-size: ${FONT_SIZES.small};
+
+  @media ${DEVISES.tablet} {
+    font-size: ${FONT_SIZES.regular};
+  }
 
   ${BaseButton} {
-    background-color: hsl(var(--clr-pink));
+    background-color: hsl(${COLORS.pink});
     padding: 0.2em 0.7em;
     font-weight: 400;
     border: 1.5px solid black;

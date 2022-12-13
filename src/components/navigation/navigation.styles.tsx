@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { device } from "../../device";
+import { DEVISES } from "../../constants";
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
 
@@ -12,15 +12,15 @@ export const NavigationContainer = styled.nav`
 export const StyledLogo = styled(Logo)`
   height: 20px;
 
-  @media ${device.tablet} {
+  @media ${DEVISES.tablet} {
     height: 27px;
   }
 
-  @media ${device.laptopM} {
+  @media ${DEVISES.laptopM} {
     height: 40px;
   }
 
-  @media ${device.desktop} {
+  @media ${DEVISES.desktop} {
     height: 50px;
   }
 `;
@@ -35,7 +35,8 @@ export const NavLinks = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media ${device.laptopM} {
+
+  @media ${DEVISES.laptopM} {
     width: 12em;
   }
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { device } from "./device";
+import { DEVISES } from "./constants";
 
 export const AppContainer = styled.div`
   padding: 0 1em;
@@ -8,7 +8,7 @@ export const AppContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  @media ${device.laptop} {
+  @media ${DEVISES.laptop} {
     width: 80%;
     margin: 0 auto;
   }

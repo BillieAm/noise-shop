@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { device } from "../../../device";
+import { DEVISES, COLORS } from "../../../constants";
 
 export const Glass = styled.div`
   padding: 1em;
@@ -21,8 +21,8 @@ export const GlassDetailsBox = styled(Glass)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: hsl(var(--clr-turquoise));
+  color: hsl(${COLORS.yellow});
 
-  @media ${device.tablet} {
+  @media ${DEVISES.tablet} {
   }
 `;
