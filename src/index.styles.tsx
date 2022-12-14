@@ -35,10 +35,6 @@ body{
   font-size: ${FONT_SIZES.small};
 }
 
-@media ${DEVISES.tablet} {
-  font-size: ${FONT_SIZES.regular};
-}
-
 img {
   width: 100%;
   display: block;
@@ -54,5 +50,11 @@ select {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@media ${DEVISES.tablet} {
+  body {
+    font-size: ${FONT_SIZES.large};
+  }
 }
 `;

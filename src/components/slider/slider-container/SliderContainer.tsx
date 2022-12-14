@@ -9,7 +9,11 @@ import SliderDot from "../slider-dot/SliderDot";
 
 import randomItems from "../../../utils/random-items/randomItems";
 
-import { MobileEntryWrapper, SliderWrapper } from "./sliderContainer.styles";
+import {
+  MobileEntryWrapper,
+  SliderWrapper,
+  DotsWrapper
+} from "./sliderContainer.styles";
 
 function SliderContainer(): JSX.Element {
   const categories = useContext(CategoriesContext);
@@ -51,14 +55,14 @@ function SliderContainer(): JSX.Element {
 
       <SliderWrapper>
         {currentSlide && <SliderItem item={currentSlide} />}
-        <div>
+        <DotsWrapper>
           {slides.map((slide, index) => (
             <SliderDot
               key={slide.id}
               onClick={() => changeSlideHandle(index)}
             />
           ))}
-        </div>
+        </DotsWrapper>
       </SliderWrapper>
     </>
   );

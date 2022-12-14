@@ -5,7 +5,7 @@ export const MobileEntryWrapper = styled.div`
   display: grid;
   gap: 1em;
 
-  @media ${DEVISES.tablet} {
+  @media ${DEVISES.laptop} {
     display: none;
   }
 `;
@@ -13,7 +13,13 @@ export const MobileEntryWrapper = styled.div`
 export const SliderWrapper = styled.div`
   display: none;
 
-  @media ${DEVISES.tablet} {
+  @media ${DEVISES.laptop} {
     display: block;
   }
+`;
+
+export const DotsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
 `;

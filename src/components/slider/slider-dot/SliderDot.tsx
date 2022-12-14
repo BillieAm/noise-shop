@@ -1,11 +1,12 @@
 import React from "react";
+import { Dot } from "./sliderDot.styles";
 
 type SliderDotProps = {
   onClick: React.MouseEventHandler;
 };
 
 function SliderDot({ onClick }: SliderDotProps): JSX.Element {
-  return <div onClick={onClick}>●</div>;
+  return <Dot onClick={onClick}>●</Dot>;
 }
 
 export default SliderDot;

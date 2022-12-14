@@ -1,13 +1,19 @@
 import styled from "styled-components/macro";
+import { DEVISES, FONT_SIZES } from "../../../constants";
 
 export const ItemWrapper = styled.div`
-  height: 16em;
+  height: 12rem;
   position: relative;
-  border-radius: 1em;
+  border-radius: 15px;
   overflow: hidden;
 
   img {
     height: 100%;
     object-fit: cover;
+  }
+
+  @media ${DEVISES.tablet} {
+    height: 14rem;
+    font-size: ${FONT_SIZES.small};
   }
 `;
