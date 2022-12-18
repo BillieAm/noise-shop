@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { DEVISES, FONT_SIZES } from "../../../constants";
 
-export const ItemWrapper = styled.div`
+export const MobileItem = styled.div`
   height: 12rem;
   position: relative;
   border-radius: 15px;
@@ -16,4 +16,8 @@ export const ItemWrapper = styled.div`
     height: 14rem;
     font-size: ${FONT_SIZES.small};
   }
+`;
+
+export const DesktopItem = styled(MobileItem)`
+  object-fit: none;
 `;

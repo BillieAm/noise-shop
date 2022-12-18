@@ -14,12 +14,12 @@ export const SliderWrapper = styled.div`
   display: none;
 
   @media ${DEVISES.laptop} {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
 export const DotsWrapper = styled.div`
   display: flex;
-  justify-content: center;
   gap: 0.5em;
 `;

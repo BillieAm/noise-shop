@@ -49,12 +49,12 @@ function SliderContainer(): JSX.Element {
     <>
       <MobileEntryWrapper>
         {slides.map(item => (
-          <SliderItem item={item} key={item.id} />
+          <SliderItem devise="small" item={item} key={item.id} />
         ))}
       </MobileEntryWrapper>
 
       <SliderWrapper>
-        {currentSlide && <SliderItem item={currentSlide} />}
+        {currentSlide && <SliderItem devise="large" item={currentSlide} />}
         <DotsWrapper>
           {slides.map((slide, index) => (
             <SliderDot
