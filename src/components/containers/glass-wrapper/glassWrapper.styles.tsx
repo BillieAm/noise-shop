@@ -8,9 +8,12 @@ export const Glass = styled.div`
   border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
+  display: flex;
+  height: 80vh;
 `;
 
 export const GlassDetailsBox = styled(Glass)`
+  height: unset;
   backdrop-filter: blur(15px);
   position: absolute;
   bottom: 0;

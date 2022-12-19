@@ -1,8 +1,8 @@
 import styled from "styled-components/macro";
-import { DEVISES, FONT_SIZES } from "../../../constants";
+import { DEVISES } from "../../../constants";
 
 export const MobileItem = styled.div`
-  height: 12rem;
+  /* height: 12rem; */
   position: relative;
   border-radius: 15px;
   overflow: hidden;
@@ -12,9 +12,9 @@ export const MobileItem = styled.div`
     object-fit: cover;
   }
 
-  @media ${DEVISES.tablet} {
-    height: 14rem;
-    font-size: ${FONT_SIZES.small};
+  @media ${DEVISES.laptop} {
+    height: 770px;
+    width: 1200px;
   }
 `;
 

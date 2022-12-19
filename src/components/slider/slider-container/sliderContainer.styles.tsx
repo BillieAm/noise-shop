@@ -3,6 +3,7 @@ import { DEVISES } from "../../../constants";
 
 export const MobileEntryWrapper = styled.div`
   display: grid;
+  grid-template-rows: repeat(3, 1fr);
   gap: 1em;
 
   @media ${DEVISES.laptop} {

@@ -54,6 +54,12 @@ a {
 
 @media ${DEVISES.tablet} {
   body {
+    font-size: ${FONT_SIZES.regular};
+  }
+}
+
+@media ${DEVISES.laptop} {
+  body {
     font-size: ${FONT_SIZES.large};
   }
 }
