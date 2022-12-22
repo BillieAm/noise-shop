@@ -3,6 +3,7 @@ import { COLORS } from "../../constants";
 
 export const BaseButton = styled.button`
   font-weight: 700;
+  font-size: 0.75em;
   padding: 0.5em 1.5em;
   background-color: hsl(${COLORS.turquoise});
   border: none;

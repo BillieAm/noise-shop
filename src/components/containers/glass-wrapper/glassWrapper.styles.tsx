@@ -8,12 +8,24 @@ export const Glass = styled.div`
   border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(10px);
-  display: flex;
+
+  @media ${DEVISES.tablet} {
+    padding: 1.5em;
+  }
+  @media ${DEVISES.laptop} {
+    padding: 2em;
+  }
+`;
+
+export const GlassMain = styled(Glass)`
   height: 80vh;
+  display: flex;
+  @media ${DEVISES.laptop} {
+    min-height: 680px;
+  }
 `;
 
 export const GlassDetailsBox = styled(Glass)`
-  height: unset;
   backdrop-filter: blur(15px);
   position: absolute;
   bottom: 0;
@@ -26,6 +38,11 @@ export const GlassDetailsBox = styled(Glass)`
   align-items: center;
   color: hsl(${COLORS.yellow});
 
-  @media ${DEVISES.tablet} {
+  @media ${DEVISES.laptop} {
+    flex-direction: column;
+    gap: 1.5em;
+    left: unset;
+    top: 0;
+    width: 33%;
   }
 `;

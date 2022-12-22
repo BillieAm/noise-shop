@@ -1,8 +1,8 @@
 import React from "react";
 
-import { Glass, GlassDetailsBox } from "./glassWrapper.styles";
+import { Glass, GlassMain, GlassDetailsBox } from "./glassWrapper.styles";
 
-type GlassType = "base" | "details" | undefined;
+type GlassType = "base" | "main" | "details" | undefined;
 
 type GlassProps = {
   children: React.ReactNode;
@@ -13,10 +13,12 @@ const getGlassType = (type: GlassType) => {
   switch (type) {
     case "base":
       return Glass;
+    case "main":
+      return GlassMain;
     case "details":
       return GlassDetailsBox;
     default:
-      return Glass;
+      return GlassMain;
   }
 };
 
