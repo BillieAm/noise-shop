@@ -42,7 +42,6 @@ export const GlassDetailsBox = styled(Glass)`
     flex-direction: column;
     gap: 1.5em;
     left: unset;
-    top: 0;
-    width: 33%;
+    min-width: 33%;
   }
 `;

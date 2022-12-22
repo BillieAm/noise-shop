@@ -35,7 +35,7 @@ body{
   font-size: ${FONT_SIZES.small};
 }
 
-h1, h2, h3, h4, p {
+h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 

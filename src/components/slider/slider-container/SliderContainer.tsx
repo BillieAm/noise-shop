@@ -25,7 +25,7 @@ function SliderContainer(): JSX.Element {
     setSlides(randomItems(categories));
   }, [categories]);
 
-  /* useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       if (currentIdx === slides.length - 1) {
         setCurrentIdx(0);
@@ -37,7 +37,7 @@ function SliderContainer(): JSX.Element {
     return () => {
       clearInterval(interval);
     };
-  }); */
+  });
 
   const currentSlide = slides.find((_, index) => index === currentIdx);
 

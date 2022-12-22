@@ -1,4 +1,11 @@
 import styled from "styled-components/macro";
-import { GlassDetailsBox } from "../../containers/glass-wrapper/glassWrapper.styles";
+import { DEVISES, COLORS } from "../../../constants";
 
-export const DetailsBox = styled(GlassDetailsBox)``;
+export const ItemSubtitle = styled.h5`
+  display: none;
+
+  @media ${DEVISES.laptop} {
+    display: block;
+    color: hsl(${COLORS.green});
+  }
+`;
