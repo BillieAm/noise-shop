@@ -26,6 +26,7 @@ export const GlassMain = styled(Glass)`
 `;
 
 export const GlassDetailsBox = styled(Glass)`
+  background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
   position: absolute;
   bottom: 0;
