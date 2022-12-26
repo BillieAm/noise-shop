@@ -6,6 +6,7 @@ import { IProduct } from "../../../types/shop";
 
 import SliderItem from "../slider-item/SliderItem";
 import SliderDot from "../slider-dot/SliderDot";
+import GlassContainer from "../../containers/glass-container/GlassContainer";
 
 import randomItems from "../../../utils/random-items/randomItems";
 
@@ -54,7 +55,9 @@ function SliderContainer(): JSX.Element {
       </MobileEntryWrapper>
 
       <SliderWrapper>
-        {currentSlide && <SliderItem devise="large" item={currentSlide} />}
+        <GlassContainer glassType="base">
+          {currentSlide && <SliderItem devise="large" item={currentSlide} />}
+        </GlassContainer>
         <DotsWrapper>
           {slides.map((slide, index) => (
             <SliderDot

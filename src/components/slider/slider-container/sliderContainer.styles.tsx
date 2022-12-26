@@ -14,7 +14,7 @@ export const SliderWrapper = styled.div`
   display: none;
 
   @media ${DEVISES.laptop} {
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

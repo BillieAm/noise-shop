@@ -31,6 +31,7 @@ export const GlassMain = styled(Glass)`
 export const GlassDetailsBox = styled(Glass)`
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);
+  padding: 1.3em;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -46,6 +47,6 @@ export const GlassDetailsBox = styled(Glass)`
     flex-direction: column;
     gap: 1.5em;
     left: unset;
-    min-width: 33%;
+    min-width: 40%;
   }
 `;

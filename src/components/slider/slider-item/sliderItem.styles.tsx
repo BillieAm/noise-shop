@@ -24,5 +24,7 @@ export const MobileItem = styled(BaseItem)`
 `;
 
 export const DesktopItem = styled(BaseItem)`
-  object-fit: none;
+  img {
+    aspect-ratio: 2 / 1;
+  }
 `;
