@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Glass, GlassMain, GlassDetailsBox } from "./glassWrapper.styles";
+import { Glass, GlassMain, GlassDetailsBox } from "./glassContainer.styles";
 
 type GlassType = "base" | "main" | "details" | undefined;
 
@@ -22,9 +22,9 @@ const getGlassType = (type: GlassType) => {
   }
 };
 
-function GlassWrapper({ children, glassType }: GlassProps): JSX.Element {
+function GlassContainer({ children, glassType }: GlassProps): JSX.Element {
   const CustomGlass = getGlassType(glassType);
   return <CustomGlass>{children}</CustomGlass>;
 }
 
-export default GlassWrapper;
+export default GlassContainer;

@@ -18,8 +18,11 @@ export const Glass = styled.div`
 `;
 
 export const GlassMain = styled(Glass)`
-  height: 80vh;
+  flex-grow: 1;
   display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media ${DEVISES.laptop} {
     min-height: 680px;
   }
