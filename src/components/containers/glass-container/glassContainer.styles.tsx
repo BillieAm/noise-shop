@@ -48,5 +48,6 @@ export const GlassDetailsBox = styled(Glass)`
     gap: 1.5em;
     left: unset;
     min-width: 40%;
+    border-bottom-right-radius: 1em;
   }
 `;
