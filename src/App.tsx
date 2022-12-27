@@ -4,6 +4,7 @@ import Navigation from "./components/navigation/Navigation";
 import Footer from "./components/footer/Footer";
 import Home from "./routes/home/Home";
 import Shop from "./routes/shop/Shop";
+import SignIn from "./routes/sign-in/SignIn";
 import Checkout from "./routes/checkout/Checkout";
 import GlassContainer from "./components/containers/glass-container/GlassContainer";
 
@@ -17,6 +18,7 @@ function App(): JSX.Element {
         <Routes>
           <Route index element={<Home />} />
           <Route path="shop/*" element={<Shop />} />
+          <Route path="sign-in" element={<SignIn />} />
           <Route path="checkout" element={<Checkout />} />
         </Routes>
       </GlassContainer>
