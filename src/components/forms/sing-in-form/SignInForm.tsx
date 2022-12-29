@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthError, AuthErrorCodes } from "firebase/auth";
 
 import FormInput from "../form-input/FormInput";
 
@@ -38,7 +39,18 @@ function SignInForm() {
       );
       console.log(response);
       resetFormFields();
-    } catch (error) {}
+    } catch (error) {
+      switch ((error as AuthError).code) {
+        case AuthErrorCodes.INVALID_PASSWORD:
+          alert("Incorrect password");
+          break;
+        case AuthErrorCodes.USER_DELETED:
+          alert("User does not exist");
+          break;
+        default:
+          console.log(error);
+      }
+    }
   };
 
   const logGoogleUser = async () => {
