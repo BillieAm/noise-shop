@@ -22,7 +22,7 @@ function Navigation(): JSX.Element {
         <NavLinks>
           <Link to="/shop">Shop</Link>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
-          <Link to="/sign-up">
+          <Link to="/sign-in">
             <FontAwesomeIcon icon={faUser} />
           </Link>
           <CartIcon />
