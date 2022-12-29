@@ -1,10 +1,13 @@
 import { ChangeEvent, FormEvent, useState } from "react";
+import { Link } from "react-router-dom";
 import { AuthError, AuthErrorCodes } from "firebase/auth";
+
+import FormInput from "../form-input/FormInput";
 
 import {
   createAuthUserWithEmailAndPassword,
   createUserDocumentFromAuth
-} from "../../utils/firebase/firebase.utils";
+} from "../../../utils/firebase/firebase.utils";
 
 const defaultFormFields = {
   displayName: "",
@@ -17,14 +20,14 @@ function SignUpForm() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
 
+  const resetFormFields = () => {
+    setFormFields(defaultFormFields);
+  };
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
     setFormFields(prevData => ({ ...prevData, [name]: value }));
-  };
-
-  const resetFormFields = () => {
-    setFormFields(defaultFormFields);
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -54,8 +57,8 @@ function SignUpForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="displayName">Name</label>
-        <input
+        <FormInput
+          label="Name"
           type="text"
           name="displayName"
           onChange={handleChange}
@@ -63,8 +66,8 @@ function SignUpForm() {
           required
         />
 
-        <label htmlFor="email">Email</label>
-        <input
+        <FormInput
+          label="Email"
           type="email"
           name="email"
           onChange={handleChange}
@@ -72,8 +75,8 @@ function SignUpForm() {
           required
         />
 
-        <label htmlFor="password">Password</label>
-        <input
+        <FormInput
+          label="Password"
           type="password"
           name="password"
           onChange={handleChange}
@@ -81,8 +84,8 @@ function SignUpForm() {
           required
         />
 
-        <label htmlFor="confirmPw">Confirm Password</label>
-        <input
+        <FormInput
+          label="Confirm Password"
           type="password"
           name="confirmPassword"
           onChange={handleChange}
@@ -92,6 +95,10 @@ function SignUpForm() {
 
         <button>Sign Up</button>
       </form>
+
+      <small>
+        Already have an account? <Link to="/sign-in">Switch to Sign-in</Link>
+      </small>
     </div>
   );
 }
