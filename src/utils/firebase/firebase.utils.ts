@@ -5,6 +5,7 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
   User
 } from "firebase/auth";
 import {
@@ -29,7 +30,7 @@ const firebaseConfig = {
   appId: "1:550950523897:web:01d2b92596e90698142328"
 };
 
-const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 /* === */
 /* AUTHENTICATION WITH GOOGLE */
@@ -49,12 +50,6 @@ export const db = getFirestore();
 
 type AdditionalInformation = {
   displayName?: string;
-};
-
-type UserData = {
-  createdAt: Date;
-  displayName: string;
-  email: string;
 };
 
 export const createUserDocumentFromAuth = async (
@@ -107,6 +102,8 @@ export const signInAuthUserWithEmailAndPassword = async (
 
   return await signInWithEmailAndPassword(auth, email, password);
 };
+
+export const signOutUser = async () => await signOut(auth);
 
 /* === */
 /* DATA BASE */

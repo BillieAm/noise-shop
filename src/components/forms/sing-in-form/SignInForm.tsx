@@ -1,12 +1,13 @@
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthError, AuthErrorCodes } from "firebase/auth";
 
 import FormInput from "../form-input/FormInput";
 
+import { UserContext } from "../../../contexts/user.context";
+
 import {
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
   signInAuthUserWithEmailAndPassword
 } from "../../../utils/firebase/firebase.utils";
 
@@ -18,6 +19,8 @@ const defaultFormFields = {
 function SignInForm() {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
+
+  const { setCurrentUser } = useContext(UserContext);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -33,12 +36,12 @@ function SignInForm() {
     e.preventDefault();
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(
+      const { user } = await signInAuthUserWithEmailAndPassword(
         email,
         password
       );
-      console.log(response);
       resetFormFields();
+      setCurrentUser(user);
     } catch (error) {
       switch ((error as AuthError).code) {
         case AuthErrorCodes.INVALID_PASSWORD:
@@ -55,7 +58,7 @@ function SignInForm() {
 
   const logGoogleUser = async () => {
     const { user } = await signInWithGooglePopup();
-    await createUserDocumentFromAuth(user);
+    setCurrentUser(user);
   };
 
   return (

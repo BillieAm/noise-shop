@@ -2,12 +2,12 @@ import React, { createContext, useState, useEffect } from "react";
 
 import { getCategoriesAndDocuments } from "../utils/firebase/firebase.utils";
 
-import { Category } from "../types/shop";
+import { CategoryContextType } from "../types/shop";
 
-const CategoriesContext = createContext<Category[] | []>([]);
+const CategoriesContext = createContext<CategoryContextType | []>([]);
 
 function CategoriesProvider({ children }: { children: React.ReactNode }) {
-  const [categories, setCategories] = useState<Category[]>([]);
+  const [categories, setCategories] = useState<CategoryContextType>([]);
 
   useEffect(() => {
     const getCategoriesMap = async () => {

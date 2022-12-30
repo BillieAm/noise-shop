@@ -10,6 +10,14 @@ export interface ICartItem extends IProduct {
   quantity: number;
 }
 
+type Category = {
+  title: string;
+  items: IProduct[];
+  image: string;
+};
+
+export type CategoryContextType = Category[];
+
 export type CartContextType = {
   cartItems: ICartItem[];
   addItemToCart(productToAdd: IProduct | ICartItem): void;
@@ -17,10 +25,13 @@ export type CartContextType = {
   removeItemFromCheckout(cartItemToRemove: ICartItem): void;
 };
 
-export type Category = {
-  title: string;
-  items: IProduct[];
-  image: string;
+type CurrentUser = {
+  displayName: string;
+};
+
+export type UserContextType = {
+  currentUser: CurrentUser | null;
+  setCurrentUser(user: User): void;
 };
 
 /* 

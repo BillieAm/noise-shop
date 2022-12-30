@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import { CategoriesProvider } from "./contexts/categories.context";
 import { CartProvider } from "./contexts/cart.context";
+import { UserProvider } from "./contexts/user.context";
 
 import GlobalStyle from "./index.styles";
 import App from "./App";
@@ -16,9 +17,11 @@ root.render(
     <BrowserRouter>
       <GlobalStyle />
       <CategoriesProvider>
-        <CartProvider>
-          <App />
-        </CartProvider>
+        <UserProvider>
+          <CartProvider>
+            <App />
+          </CartProvider>
+        </UserProvider>
       </CategoriesProvider>
     </BrowserRouter>
   </React.StrictMode>
