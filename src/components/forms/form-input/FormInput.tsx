@@ -1,13 +1,15 @@
 import { InputHTMLAttributes } from "react";
 
+import GlassContainer from "../../containers/glass-container/GlassContainer";
+
 type InputProps = { label: string } & InputHTMLAttributes<HTMLInputElement>;
 
 function FormInput({ label, ...otherProps }: InputProps) {
   return (
-    <div>
+    <GlassContainer glassType="base">
       <label>{label}</label>
       <input {...otherProps} />
-    </div>
+    </GlassContainer>
   );
 }
 
