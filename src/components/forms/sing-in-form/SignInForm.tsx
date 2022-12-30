@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthError, AuthErrorCodes } from "firebase/auth";
 
+import GlassContainer from "../../containers/glass-container/GlassContainer";
 import FormInput from "../form-input/FormInput";
 
 import { UserContext } from "../../../contexts/user.context";
@@ -62,7 +63,7 @@ function SignInForm() {
   };
 
   return (
-    <div>
+    <GlassContainer glassType="base">
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Email"
@@ -88,7 +89,7 @@ function SignInForm() {
       <small>
         Don't have an account? <Link to="/sign-up">Switch to Sign-up</Link>
       </small>
-    </div>
+    </GlassContainer>
   );
 }
 
