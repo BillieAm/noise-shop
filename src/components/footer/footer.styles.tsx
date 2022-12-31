@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 import { DEVISES, FONT_SIZES, COLORS } from "../../constants";
-import { BaseButton } from "../button/button.styles";
+import { BasicButton } from "../button/button.styles";
 
 export const FooterContainer = styled.footer`
   display: flex;
@@ -24,7 +24,7 @@ export const Newsletter = styled.div`
     font-size: ${FONT_SIZES.regular};
   }
 
-  ${BaseButton} {
+  ${BasicButton} {
     background-color: hsl(${COLORS.pink});
     padding: 0.2em 0.7em;
     font-weight: 400;

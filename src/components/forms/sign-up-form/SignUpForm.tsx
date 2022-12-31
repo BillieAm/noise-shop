@@ -4,6 +4,7 @@ import { AuthError, AuthErrorCodes } from "firebase/auth";
 
 import GlassContainer from "../../containers/glass-container/GlassContainer";
 import FormInput from "../form-input/FormInput";
+import Button, { BUTTON_TYPE_CLASSES } from "../../button/Button";
 
 import { UserContext } from "../../../contexts/user.context";
 
@@ -62,7 +63,7 @@ function SignUpForm() {
   };
 
   return (
-    <GlassContainer glassType="base">
+    <GlassContainer glassType="form">
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Name"
@@ -100,7 +101,7 @@ function SignUpForm() {
           required
         />
 
-        <button>Sign Up</button>
+        <Button buttonType={BUTTON_TYPE_CLASSES.form}>Sign Up</Button>
       </form>
 
       <small>

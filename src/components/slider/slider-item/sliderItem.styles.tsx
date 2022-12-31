@@ -25,6 +25,8 @@ export const MobileItem = styled(BaseItem)`
 
 export const DesktopItem = styled(BaseItem)`
   margin: 2em;
+  border-radius: 0.5em;
+  overflow: hidden;
   img {
     aspect-ratio: 2 / 1;
   }

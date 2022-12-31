@@ -4,6 +4,8 @@ import { AuthError, AuthErrorCodes } from "firebase/auth";
 
 import GlassContainer from "../../containers/glass-container/GlassContainer";
 import FormInput from "../form-input/FormInput";
+import Button, { BUTTON_TYPE_CLASSES } from "../../button/Button";
+import HorizontalOr from "../horizontal-or/HorizontalOr";
 
 import { UserContext } from "../../../contexts/user.context";
 
@@ -63,7 +65,7 @@ function SignInForm() {
   };
 
   return (
-    <GlassContainer glassType="base">
+    <GlassContainer glassType="form">
       <form onSubmit={handleSubmit}>
         <FormInput
           label="Email"
@@ -83,9 +85,14 @@ function SignInForm() {
           required
         />
 
-        <button>Sign In</button>
+        <Button buttonType={BUTTON_TYPE_CLASSES.form}>Sign In</Button>
       </form>
-      <button onClick={logGoogleUser}>Sign in with google</button>
+
+      <HorizontalOr />
+
+      <Button buttonType={BUTTON_TYPE_CLASSES.form} onClick={logGoogleUser}>
+        Sign in with google
+      </Button>
       <small>
         Don't have an account? <Link to="/sign-up">Switch to Sign-up</Link>
       </small>

@@ -1,4 +1,4 @@
-import Button from "../button/Button";
+import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -21,7 +21,7 @@ function Footer(): JSX.Element {
       </SocialMedia>
       <Newsletter>
         <p>Subscribe to our newsletter</p>
-        <Button>sign up</Button>
+        <Button buttonType={BUTTON_TYPE_CLASSES.basic}>sign up</Button>
       </Newsletter>
     </FooterContainer>
   );

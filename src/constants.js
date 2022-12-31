@@ -19,5 +19,6 @@ export const COLORS = {
   yellow: "45 100% 61%",
   turquoise: "162 71% 64%",
   green: "109 81% 53%",
-  pink: "289 84% 78%"
+  pink: "289 84% 78%",
+  blue: "206 96% 72%"
 };

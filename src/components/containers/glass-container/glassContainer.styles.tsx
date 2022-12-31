@@ -6,7 +6,7 @@ export const Glass = styled.div`
   border-radius: 1em;
   border: 2px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
 `;
 
 export const GlassMain = styled(Glass)`
@@ -47,5 +47,25 @@ export const GlassDetailsBox = styled(Glass)`
     left: unset;
     min-width: 40%;
     border-bottom-right-radius: 1em;
+  }
+`;
+
+export const GlassForm = styled(Glass)`
+  max-width: 40rem;
+  font-size: 1rem;
+  padding: 1em;
+  border-radius: 0.3rem;
+  ${Glass} {
+    border-radius: 0.2rem;
+  }
+
+  @media ${DEVISES.tablet} {
+    font-size: 1.2rem;
+    padding: 2em;
+  }
+
+  @media ${DEVISES.laptop} {
+    font-size: 1.5rem;
+    padding: 2em;
   }
 `;
