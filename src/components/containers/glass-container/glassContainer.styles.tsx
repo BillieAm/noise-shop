@@ -9,23 +9,6 @@ export const Glass = styled.div`
   backdrop-filter: blur(6px);
 `;
 
-export const GlassMain = styled(Glass)`
-  padding: 1em;
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media ${DEVISES.tablet} {
-    padding: 1.5em;
-  }
-
-  @media ${DEVISES.laptop} {
-    padding: 2em;
-    min-height: 680px;
-  }
-`;
-
 export const GlassDetailsBox = styled(Glass)`
   background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(15px);

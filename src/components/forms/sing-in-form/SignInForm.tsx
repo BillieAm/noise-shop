@@ -91,7 +91,7 @@ function SignInForm() {
       <HorizontalOr />
 
       <Button buttonType={BUTTON_TYPE_CLASSES.form} onClick={logGoogleUser}>
-        Sign in with google
+        Sign in with Google
       </Button>
       <small>
         Don't have an account? <Link to="/sign-up">Switch to Sign-up</Link>

@@ -1,13 +1,8 @@
 import React from "react";
 
-import {
-  Glass,
-  GlassMain,
-  GlassDetailsBox,
-  GlassForm
-} from "./glassContainer.styles";
+import { Glass, GlassDetailsBox, GlassForm } from "./glassContainer.styles";
 
-type GlassType = "base" | "main" | "details" | "form" | undefined;
+type GlassType = "base" | "details" | "form" | undefined;
 
 type GlassProps = {
   children: React.ReactNode;
@@ -18,14 +13,12 @@ const getGlassType = (type: GlassType) => {
   switch (type) {
     case "base":
       return Glass;
-    case "main":
-      return GlassMain;
     case "details":
       return GlassDetailsBox;
     case "form":
       return GlassForm;
     default:
-      return GlassMain;
+      return Glass;
   }
 };
 
