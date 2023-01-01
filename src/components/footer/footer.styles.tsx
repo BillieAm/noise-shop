@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { DEVISES, FONT_SIZES, COLORS } from "../../constants";
+import { DEVISES, SIZES, COLORS } from "../../constants";
 import { BasicButton } from "../button/button.styles";
 
 export const FooterContainer = styled.footer`
@@ -18,10 +18,10 @@ export const Newsletter = styled.div`
   display: flex;
   gap: 1em;
   align-items: center;
-  font-size: ${FONT_SIZES.small};
+  font-size: ${SIZES.small};
 
   @media ${DEVISES.tablet} {
-    font-size: ${FONT_SIZES.regular};
+    font-size: ${SIZES.regular};
   }
 
   ${BasicButton} {

@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components/macro";
 import background from "./assets/app-background.jpg";
-import { DEVISES, FONT_SIZES } from "./constants";
+import { DEVISES, SIZES } from "./constants";
 
 export default createGlobalStyle`
 
@@ -31,7 +31,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Poppins', sans-serif;
-  font-size: ${FONT_SIZES.small};
+  font-size: ${SIZES.small};
 }
 
 h1, h2, h3, h4, h5, p {
@@ -57,13 +57,13 @@ a {
 
 @media ${DEVISES.tablet} {
   body {
-    font-size: ${FONT_SIZES.regular};
+    font-size: ${SIZES.regular};
   }
 }
 
 @media ${DEVISES.laptop} {
   body {
-    font-size: ${FONT_SIZES.large};
+    font-size: ${SIZES.large};
   }
 }
 `;

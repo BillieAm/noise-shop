@@ -1,9 +1,13 @@
-import React from "react";
-
 import SliderContainer from "../../components/slider/slider-container/SliderContainer";
+import PageHeader from "../../components/page-header/PageHeader";
 
 function Home(): JSX.Element {
-  return <SliderContainer />;
+  return (
+    <>
+      <PageHeader />
+      <SliderContainer />
+    </>
+  );
 }
 
 export default Home;

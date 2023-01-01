@@ -9,7 +9,7 @@ export const DEVISES = {
   desktop: "(min-width: 2560px)"
 };
 
-export const FONT_SIZES = {
+export const SIZES = {
   small: "0.75rem",
   regular: "1rem",
   large: "1.5rem"
