@@ -18,10 +18,10 @@ export const Newsletter = styled.div`
   display: flex;
   gap: 1em;
   align-items: center;
-  font-size: ${SIZES.small};
+  font-size: ${SIZES.smallFix};
 
   @media ${DEVISES.tablet} {
-    font-size: ${SIZES.regular};
+    font-size: ${SIZES.regularFix};
   }
 
   ${BasicButton} {

@@ -31,7 +31,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Poppins', sans-serif;
-  font-size: ${SIZES.small};
+  font-size: ${SIZES.smallFix};
 }
 
 h1, h2, h3, h4, h5, p {
@@ -57,13 +57,13 @@ a {
 
 @media ${DEVISES.tablet} {
   body {
-    font-size: ${SIZES.regular};
+    font-size: ${SIZES.regularFix};
   }
 }
 
 @media ${DEVISES.laptop} {
   body {
-    font-size: ${SIZES.large};
+    font-size: ${SIZES.largeFix};
   }
 }
 `;

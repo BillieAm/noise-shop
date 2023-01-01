@@ -5,7 +5,7 @@ import { DEVISES, SIZES } from "../../../constants";
 export const MainGlass = styled(Glass)`
   position: relative;
   padding: 1em;
-  padding-top: calc(${SIZES.small} * 2);
+  padding-top: calc(${SIZES.smallFix} * 2.5);
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -14,12 +14,12 @@ export const MainGlass = styled(Glass)`
 
   @media ${DEVISES.tablet} {
     padding: 1.5em;
-    padding-top: calc(${SIZES.regular} * 2);
+    padding-top: calc(${SIZES.regularFix} * 2.5);
   }
 
   @media ${DEVISES.laptop} {
     padding: 2em;
-    padding-top: calc(${SIZES.large} * 2);
+    padding-top: calc(${SIZES.largeFix} * 2.5);
     min-height: 680px;
   }
 `;

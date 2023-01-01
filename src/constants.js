@@ -10,9 +10,18 @@ export const DEVISES = {
 };
 
 export const SIZES = {
-  small: "0.75rem",
-  regular: "1rem",
-  large: "1.5rem"
+  xSmallFix: "0.5rem",
+  smallFix: "0.75rem",
+  regularFix: "1rem",
+  mediumFix: "1.25rem",
+  largeFix: "1.5rem",
+  xLargeFix: "1.75rem",
+  xSmallRel: "0.5em",
+  smallRel: "0.75em",
+  regularRel: "1em",
+  mediumRel: "1.25em",
+  largeRel: "1.5em",
+  xLargeRel: "1.75em"
 };
 
 export const COLORS = {

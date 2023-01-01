@@ -4,7 +4,7 @@ import PageHeader from "../../components/page-header/PageHeader";
 function Home(): JSX.Element {
   return (
     <>
-      <PageHeader />
+      <PageHeader>Our Top 3</PageHeader>
       <SliderContainer />
     </>
   );
