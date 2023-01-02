@@ -1,7 +1,7 @@
 import styled from "styled-components/macro";
 import { Glass } from "../containers/glass-container/glassContainer.styles";
 import { Link } from "react-router-dom";
-import { SIZES } from "../../constants";
+import { SIZES, COLORS } from "../../constants";
 
 type BackgroundImageProps = {
   categoryImg: string;
@@ -17,6 +17,17 @@ export const GlassWrapper = styled(Glass)`
   border-radius: ${SIZES.xSmallFix};
   overflow: hidden;
   place-items: center;
+
+  h3 {
+    width: 80%;
+    background-color: hsl(${COLORS.dark} / 0.7);
+    border: 2px solid hsl(${COLORS.white});
+    color: hsl(${COLORS.yellow});
+    text-transform: capitalize;
+    text-align: center;
+    align-self: end;
+    margin-bottom: ${SIZES.regularRel};
+  }
 `;
 
 export const StyledCategoryItem = styled.div<BackgroundImageProps>`

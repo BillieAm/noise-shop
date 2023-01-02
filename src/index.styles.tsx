@@ -5,19 +5,8 @@ import { DEVISES, SIZES } from "./constants";
 export default createGlobalStyle`
 
 /* ------------------- */
-/* Custom properties   */
+/* Reset               */
 /* ------------------- */
-
-:root {
-  /* colors */
-  --clr-dark: 230 35% 7%;
-  --clr-light: 231 77% 90%;
-  --clr-white: 0 0% 100%;
-  --clr-light-yellow: 60 100% 50%;
-  --clr-peach-pink: 0 100% 76%;
-  --clr-blue: 206 96% 72%;
-  --clr-purple: 256 93% 79%;
-}
 
 *,
 *::before,

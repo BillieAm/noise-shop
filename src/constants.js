@@ -25,6 +25,12 @@ export const SIZES = {
 };
 
 export const COLORS = {
+  dark: "230 35% 7%",
+  light: "231 77% 90%",
+  white: "0 0% 100%",
+  lightYellow: "60 100% 50%",
+  peachPink: "0 100% 76%",
+  purple: "256 93% 79%",
   yellow: "45 100% 61%",
   turquoise: "162 71% 64%",
   green: "109 81% 53%",
