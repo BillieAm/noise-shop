@@ -1,15 +1,18 @@
-import { Link } from "react-router-dom";
-
-import { CategoryLink, BackgroundImag } from "./categoryItem.styles";
+import {
+  CategoryLink,
+  GlassWrapper,
+  StyledCategoryItem
+} from "./categoryItem.styles";
 
 import { Category } from "../../types/shop";
 
 function CategoryItem({ category }: { category: Category }): JSX.Element {
   return (
     <CategoryLink to={category.title}>
-      <BackgroundImag categoryImg={category.image}>
-        <h2>{category.title}</h2>
-      </BackgroundImag>
+      <GlassWrapper>
+        <StyledCategoryItem categoryImg={category.image}></StyledCategoryItem>
+        <h3>{category.title}</h3>
+      </GlassWrapper>
     </CategoryLink>
   );
 }
