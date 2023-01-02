@@ -63,7 +63,7 @@ a {
 
 @media ${DEVISES.laptop} {
   body {
-    font-size: ${SIZES.largeFix};
+    font-size: ${SIZES.mediumFix};
   }
 }
 `;

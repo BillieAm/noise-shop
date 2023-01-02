@@ -5,7 +5,7 @@ function SignUp() {
   return (
     <>
       <PageHeader>Sign Up</PageHeader>
-      <SignUpForm />;
+      <SignUpForm />
     </>
   );
 }

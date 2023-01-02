@@ -5,7 +5,7 @@ export const MobileEntryWrapper = styled.div`
   display: grid;
   gap: 1em;
 
-  @media ${DEVISES.laptop} {
+  @media ${DEVISES.tablet} {
     display: none;
   }
 `;
@@ -13,7 +13,7 @@ export const MobileEntryWrapper = styled.div`
 export const SliderWrapper = styled.div`
   display: none;
 
-  @media ${DEVISES.laptop} {
+  @media ${DEVISES.tablet} {
     width: 80%;
     display: flex;
     flex-direction: column;

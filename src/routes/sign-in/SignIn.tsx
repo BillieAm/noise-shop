@@ -5,7 +5,7 @@ function SignIn() {
   return (
     <>
       <PageHeader>Sign In</PageHeader>
-      <SignInForm />;
+      <SignInForm />
     </>
   );
 }

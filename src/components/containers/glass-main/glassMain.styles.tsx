@@ -20,6 +20,5 @@ export const MainGlass = styled(Glass)`
   @media ${DEVISES.laptop} {
     padding: 2em;
     padding-top: calc(${SIZES.largeFix} * 2.5);
-    min-height: 680px;
   }
 `;

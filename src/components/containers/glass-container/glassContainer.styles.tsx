@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { DEVISES, COLORS } from "../../../constants";
+import { DEVISES, SIZES, COLORS } from "../../../constants";
 
 export const Glass = styled.div`
   background-color: rgba(255, 255, 255, 0.1);
@@ -34,8 +34,7 @@ export const GlassDetailsBox = styled(Glass)`
 `;
 
 export const GlassForm = styled(Glass)`
-  max-width: 40rem;
-  font-size: 1rem;
+  max-width: 30rem;
   padding: 1em;
   border-radius: 0.3rem;
   ${Glass} {
@@ -43,12 +42,10 @@ export const GlassForm = styled(Glass)`
   }
 
   @media ${DEVISES.tablet} {
-    font-size: 1.2rem;
     padding: 2em;
   }
 
   @media ${DEVISES.laptop} {
-    font-size: 1.5rem;
     padding: 2em;
   }
 `;

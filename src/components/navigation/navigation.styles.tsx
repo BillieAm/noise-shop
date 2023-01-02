@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { DEVISES } from "../../constants";
+import { DEVISES, SIZES } from "../../constants";
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
 
@@ -10,19 +10,7 @@ export const NavigationContainer = styled.nav`
 `;
 
 export const StyledLogo = styled(Logo)`
-  height: 20px;
-
-  @media ${DEVISES.tablet} {
-    height: 27px;
-  }
-
-  @media ${DEVISES.laptopM} {
-    height: 40px;
-  }
-
-  @media ${DEVISES.desktop} {
-    height: 50px;
-  }
+  height: ${SIZES.mediumRel};
 `;
 
 export const LogoContainer = styled(Link)`
