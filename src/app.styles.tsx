@@ -9,7 +9,7 @@ export const AppContainer = styled.div`
 
   @media ${DEVISES.laptop} {
     width: 80%;
-    max-width: 1500px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 `;

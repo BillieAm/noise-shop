@@ -2,8 +2,8 @@ import React from "react";
 
 import {
   BasicButton,
-  BaseButton,
-  BuyButton,
+  AddButton,
+  InfoButton,
   FormButton
 } from "./button.styles";
 
@@ -15,16 +15,16 @@ type ButtonProps = {
 
 export enum BUTTON_TYPE_CLASSES {
   basic,
-  base,
-  buy,
+  add,
+  info,
   form
 }
 
-const getButton = (btnType = BUTTON_TYPE_CLASSES.base) => {
+const getButton = (btnType = BUTTON_TYPE_CLASSES.basic) => {
   return {
     [BUTTON_TYPE_CLASSES.basic]: BasicButton,
-    [BUTTON_TYPE_CLASSES.base]: BaseButton,
-    [BUTTON_TYPE_CLASSES.buy]: BuyButton,
+    [BUTTON_TYPE_CLASSES.add]: AddButton,
+    [BUTTON_TYPE_CLASSES.info]: InfoButton,
     [BUTTON_TYPE_CLASSES.form]: FormButton
   }[btnType];
 };

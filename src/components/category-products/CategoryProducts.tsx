@@ -3,8 +3,10 @@ import { useParams } from "react-router-dom";
 
 import { CategoriesContext } from "../../contexts/categories.context";
 
-import ProductItem from "../product-item/ProductItem";
+import CategoryProductItem from "../category-product-item/CategoryProductItem";
 import PageHeader from "../page-header/PageHeader";
+
+import { ProductsGridWrapper } from "./categoryProducts.styles";
 
 import { Category, IProduct } from "../../types/shop";
 
@@ -21,12 +23,12 @@ function CategoryProducts(): JSX.Element {
     <>
       <PageHeader>{currentCategory?.title}</PageHeader>
 
-      <div>
+      <ProductsGridWrapper>
         {currentCategory &&
           currentCategory.items.map((item: IProduct) => (
-            <ProductItem key={item.id} product={item} />
+            <CategoryProductItem key={item.id} product={item} />
           ))}
-      </div>
+      </ProductsGridWrapper>
     </>
   );
 }

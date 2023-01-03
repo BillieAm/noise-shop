@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { COLORS } from "../../constants";
+import { SIZES, COLORS } from "../../constants";
 
 export const BasicButton = styled.button`
   font-weight: 700;
@@ -12,12 +12,15 @@ export const BasicButton = styled.button`
   white-space: nowrap;
 `;
 
-export const BaseButton = styled(BasicButton)`
-  background-color: hsl(${COLORS.turquoise});
+export const AddButton = styled(BasicButton)`
+  background-color: hsl(${COLORS.peachPink});
+  width: 100%;
+  color: hsl(${COLORS.dark});
+  border: 0.17em solid hsl(${COLORS.dark});
 `;
 
-export const BuyButton = styled(BasicButton)`
-  background-color: hsl(${COLORS.green});
+export const InfoButton = styled(BasicButton)`
+  background-color: hsl(${COLORS.turquoise});
 `;
 
 export const FormButton = styled(BasicButton)`

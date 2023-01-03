@@ -11,7 +11,7 @@ function SliderItemDetails({ item }: { item: IProduct }): JSX.Element {
       <h3>{item.name}</h3>
       <ItemSubtitle>{item.subtitle}</ItemSubtitle>
       <Button
-        buttonType={BUTTON_TYPE_CLASSES.base}
+        buttonType={BUTTON_TYPE_CLASSES.info}
         onClick={() => console.log("clicked")}
       >
         learn more
