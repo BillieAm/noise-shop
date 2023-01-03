@@ -4,6 +4,7 @@ import { Glass } from "../containers/glass-container/glassContainer.styles";
 
 export const StyledHeader = styled.div`
   font-family: "Chango", cursive;
+  text-transform: capitalize;
   position: absolute;
   top: -${SIZES.smallRel};
 

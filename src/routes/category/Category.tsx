@@ -1,7 +1,7 @@
-import ProductsContainer from "../../components/products-container/ProductsContainer";
+import CategoryProducts from "../../components/category-products/CategoryProducts";
 
 function Category(): JSX.Element {
-  return <ProductsContainer />;
+  return <CategoryProducts />;
 }
 
 export default Category;
