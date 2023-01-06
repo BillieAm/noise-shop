@@ -3,7 +3,7 @@ import { SIZES, COLORS } from "../../constants";
 
 export const BasicButton = styled.button`
   font-weight: 700;
-  font-size: 0.75em;
+  font-size: ${SIZES.smallRel};
   padding: 0.5em 1.5em;
   border: none;
   border-radius: 50px;

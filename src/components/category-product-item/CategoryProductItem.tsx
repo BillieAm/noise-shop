@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 
 import { CartContext } from "../../contexts/cart.context";
 
@@ -22,14 +23,20 @@ function CategoryProductItem({ product }: { product: IProduct }): JSX.Element {
     addItemToCart(product);
   };
 
+  const pathBeautifier = (productName: string) => {
+    return productName.replaceAll(" ", "-");
+  };
+
   return (
     <CardGlass>
       <Card>
-        <CardImg src={imageUrl} alt={name} />
-        <CardInfo>
-          <h4>{name}</h4>
-          <Price>${price}</Price>
-        </CardInfo>
+        <Link to={pathBeautifier(name)}>
+          <CardImg src={imageUrl} alt={name} />
+          <CardInfo>
+            <h4>{name}</h4>
+            <Price>${price}</Price>
+          </CardInfo>
+        </Link>
         <Button buttonType={BUTTON_TYPE_CLASSES.add} onClick={addProductToCart}>
           Add to cart
         </Button>

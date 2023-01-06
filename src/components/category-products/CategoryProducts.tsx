@@ -17,7 +17,6 @@ function CategoryProducts(): JSX.Element {
   const currentCategory = categories.find(
     (categoryObj: Category) => categoryObj.title === category
   );
-  console.log(currentCategory);
 
   return (
     <>
