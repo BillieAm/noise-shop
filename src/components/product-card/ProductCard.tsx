@@ -11,11 +11,12 @@ import {
   CardImg,
   CardInfo,
   Price
-} from "./categoryProductItem.styles";
+} from "./productCard.styles";
 
 import { IProduct, CartContextType } from "../../types/shop";
+import pathBeautifier from "../../utils/path-beautifier/pathBeautifier";
 
-function CategoryProductItem({ product }: { product: IProduct }): JSX.Element {
+function ProductCard({ product }: { product: IProduct }): JSX.Element {
   const { name, imageUrl, price } = product;
   const { addItemToCart } = useContext(CartContext) as CartContextType;
 
@@ -23,14 +24,10 @@ function CategoryProductItem({ product }: { product: IProduct }): JSX.Element {
     addItemToCart(product);
   };
 
-  const pathBeautifier = (productName: string) => {
-    return productName.replaceAll(" ", "-");
-  };
-
   return (
     <CardGlass>
       <Card>
-        <Link to={pathBeautifier(name)}>
+        <Link to={pathBeautifier(name)} state={product}>
           <CardImg src={imageUrl} alt={name} />
           <CardInfo>
             <h4>{name}</h4>
@@ -45,4 +42,4 @@ function CategoryProductItem({ product }: { product: IProduct }): JSX.Element {
   );
 }
 
-export default CategoryProductItem;
+export default ProductCard;

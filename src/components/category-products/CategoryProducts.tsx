@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 import { CategoriesContext } from "../../contexts/categories.context";
 
-import CategoryProductItem from "../category-product-item/CategoryProductItem";
+import ProductCard from "../product-card/ProductCard";
 import PageHeader from "../page-header/PageHeader";
 
 import { ProductsGridWrapper } from "./categoryProducts.styles";
@@ -25,7 +25,7 @@ function CategoryProducts(): JSX.Element {
       <ProductsGridWrapper>
         {currentCategory &&
           currentCategory.items.map((item: IProduct) => (
-            <CategoryProductItem key={item.id} product={item} />
+            <ProductCard key={item.id} product={item} />
           ))}
       </ProductsGridWrapper>
     </>

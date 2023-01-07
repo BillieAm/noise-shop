@@ -20,7 +20,6 @@ function SliderContainer(): JSX.Element {
   const categories = useContext(CategoriesContext);
   const [slides, setSlides] = useState<IProduct[]>([]);
   const [currentIdx, setCurrentIdx] = useState(0);
-  console.log("categories", categories);
 
   useEffect(() => {
     setSlides(randomItems(categories));
