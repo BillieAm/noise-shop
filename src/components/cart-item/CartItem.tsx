@@ -1,3 +1,5 @@
+import { StyledItem, StyledImage, StyledItemInfo } from "./cartItem.styles";
+
 import { ICartItem } from "../../types/shop";
 
 interface CartItemProps {
@@ -6,10 +8,15 @@ interface CartItemProps {
 
 function CartItem({ item }: CartItemProps): JSX.Element {
   return (
-    <div>
-      <h2>{item.id}</h2>
-      <span>{item.quantity}</span>
-    </div>
+    <StyledItem>
+      <StyledImage src={item.imageUrl} alt={item.name} />
+      <StyledItemInfo>
+        <h4>{item.name}</h4>
+        <p>
+          ${item.price} &#215; {item.quantity}
+        </p>
+      </StyledItemInfo>
+    </StyledItem>
   );
 }
 

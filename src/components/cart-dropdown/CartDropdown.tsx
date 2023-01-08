@@ -7,6 +7,8 @@ import { CartContextType } from "../../types/shop";
 import CartItem from "../cart-item/CartItem";
 import Button from "../button/Button";
 
+import { Dropdown, StyledWhiteGlass } from "./cartDropdown.styles";
+
 function CartDropdown(): JSX.Element {
   const { cartItems } = useContext(CartContext) as CartContextType;
   const navigate = useNavigate();
@@ -16,12 +18,20 @@ function CartDropdown(): JSX.Element {
   };
 
   return (
-    <div>
-      {cartItems.length
-        ? cartItems.map(item => <CartItem key={item.id} item={item} />)
-        : "empty"}
-      <Button onClick={goToCheckoutHandler}>Checkout</Button>
-    </div>
+    <Dropdown>
+      <StyledWhiteGlass>
+        {cartItems.length
+          ? cartItems.map(item => <CartItem key={item.id} item={item} />)
+          : "empty"}
+        <hr />
+        <h4>Total:</h4>
+        {`$${cartItems.reduce(
+          (acc, item) => item.price * item.quantity + acc,
+          0
+        )}`}
+        <Button onClick={goToCheckoutHandler}>Checkout</Button>
+      </StyledWhiteGlass>
+    </Dropdown>
   );
 }
 
