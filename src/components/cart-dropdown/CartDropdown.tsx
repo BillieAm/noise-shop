@@ -14,7 +14,7 @@ function CartDropdown(): JSX.Element {
   const navigate = useNavigate();
 
   const goToCheckoutHandler = () => {
-    navigate("/checkout");
+    navigate("/cart");
   };
 
   return (

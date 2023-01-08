@@ -6,7 +6,7 @@ import Home from "./routes/home/Home";
 import Shop from "./routes/shop/Shop";
 import SignIn from "./routes/sign-in/SignIn";
 import SignUp from "./routes/sign-up/SignUp";
-import Checkout from "./routes/checkout/Checkout";
+import Cart from "./routes/cart/Cart";
 /* import GlassContainer from "./components/containers/glass-container/GlassContainer"; */
 import GlassMain from "./components/containers/glass-main/GlassMain";
 
@@ -22,7 +22,7 @@ function App(): JSX.Element {
           <Route path="shop/*" element={<Shop />} />
           <Route path="sign-in" element={<SignIn />} />
           <Route path="sign-up" element={<SignUp />} />
-          <Route path="checkout" element={<Checkout />} />
+          <Route path="cart" element={<Cart />} />
         </Routes>
       </GlassMain>
       <Footer />

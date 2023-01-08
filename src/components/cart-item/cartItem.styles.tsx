@@ -4,11 +4,12 @@ import { SIZES } from "../../constants";
 export const StyledItem = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 5rem);
-  /* gap: ${SIZES.smallRel}; */
-  margin-bottom: ${SIZES.smallRel};
+  /* grid-gap: ${SIZES.smallRel} ${SIZES.smallRel}; */
+  margin: ${SIZES.smallRel};
 `;
 
 export const StyledImage = styled.img`
+  align-self: center;
   width: 4rem;
   aspect-ratio: 1 / 1;
   object-fit: cover;
