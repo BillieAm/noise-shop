@@ -24,12 +24,14 @@ function CartDropdown(): JSX.Element {
           ? cartItems.map(item => <CartItem key={item.id} item={item} />)
           : "empty"}
         <hr />
-        <h4>Total:</h4>
-        {`$${cartItems.reduce(
-          (acc, item) => item.price * item.quantity + acc,
-          0
-        )}`}
-        <Button onClick={goToCheckoutHandler}>Checkout</Button>
+        <p>
+          {`Total:
+          $${cartItems.reduce(
+            (acc, item) => item.price * item.quantity + acc,
+            0
+          )}`}
+        </p>
+        <Button onClick={goToCheckoutHandler}>Go to cart</Button>
       </StyledWhiteGlass>
     </Dropdown>
   );
