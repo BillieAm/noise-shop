@@ -1,10 +1,10 @@
 import SliderContainer from "../../components/slider/slider-container/SliderContainer";
-import PageHeader from "../../components/page-header/PageHeader";
+import EntryText from "../../components/entry-text/EntryText";
 
 function Home(): JSX.Element {
   return (
     <>
-      <PageHeader>Popular Products</PageHeader>
+      <EntryText />
       <SliderContainer />
     </>
   );
