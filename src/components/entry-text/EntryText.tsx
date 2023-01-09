@@ -6,10 +6,11 @@ function EntryText() {
   return (
     <StyledEntryText>
       <p>
-        Demo audio online shop, built using web development technologies like
-        ReactJS and Typescript. The shop is powered by a secure Firebase
-        database, and features stylish design elements created with
-        Styled-components.
+        Demo audio plug-ins online shop, built using web development
+        technologies like
+        <strong> ReactJS</strong> and <strong> Typescript</strong>. The shop is
+        powered by a secure <strong>Firebase</strong> database, and features
+        stylish design elements created with <strong>Styled-components</strong>.
       </p>
     </StyledEntryText>
   );
