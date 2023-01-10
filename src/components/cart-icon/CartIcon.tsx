@@ -8,7 +8,10 @@ import CartDropdown from "../../components/cart-dropdown/CartDropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-import { CartIconContainer } from "./cartIcon.styles";
+import {
+  StyledCartIconContainer,
+  StyledCartIconCounter
+} from "./cartIcon.styles";
 
 function CartIcon(): JSX.Element {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -21,11 +24,11 @@ function CartIcon(): JSX.Element {
   }, 0);
 
   return (
-    <CartIconContainer>
+    <StyledCartIconContainer>
       <FontAwesomeIcon icon={faCartShopping} onClick={toggleCartDropdown} />
-      <span>{cartItemsCounter}</span>
+      <StyledCartIconCounter>{cartItemsCounter}</StyledCartIconCounter>
       {isCartOpen && <CartDropdown />}
-    </CartIconContainer>
+    </StyledCartIconContainer>
   );
 }
 
