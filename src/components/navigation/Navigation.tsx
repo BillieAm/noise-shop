@@ -32,7 +32,7 @@ function Navigation(): JSX.Element {
         </LogoContainer>
         <NavLinks>
           <Link to="/shop">Shop</Link>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          {/* <FontAwesomeIcon icon={faMagnifyingGlass} /> */}
           {currentUser ? (
             <span onClick={handleSignOut}>Sign Out</span>
           ) : (

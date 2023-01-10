@@ -20,7 +20,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Poppins', sans-serif;
-  font-size: ${SIZES.smallFix};
+  font-size: ${SIZES.regularFix};
 }
 
 h1, h2, h3, h4, h5, p {
@@ -44,7 +44,7 @@ a {
   color: inherit;
 }
 
-@media ${DEVISES.tablet} {
+/* @media ${DEVISES.tablet} {
   body {
     font-size: ${SIZES.regularFix};
   }
@@ -54,5 +54,5 @@ a {
   body {
     font-size: ${SIZES.mediumFix};
   }
-}
+} */
 `;

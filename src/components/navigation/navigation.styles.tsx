@@ -19,13 +19,13 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const NavLinks = styled.div`
-  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: ${SIZES.xLargeRel};
 
-  @media ${DEVISES.laptopM} {
-    width: 12em;
+  @media ${DEVISES.tablet} {
+    gap: 2em;
   }
 `;
 

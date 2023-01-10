@@ -6,7 +6,7 @@ function EntryText() {
   return (
     <StyledEntryText>
       <p>
-        Demo audio plug-ins online shop, built using web development
+        Noise is a demo audio plug-ins online shop, built using web development
         technologies like
         <strong> ReactJS</strong> and <strong> Typescript</strong>. The shop is
         powered by a secure <strong>Firebase</strong> database, and features
