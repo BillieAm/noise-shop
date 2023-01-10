@@ -1,11 +1,11 @@
 import styled from "styled-components/macro";
-import { DEVISES } from "../../../constants";
+import { DEVICES } from "../../../constants";
 
 export const MobileEntryWrapper = styled.div`
   display: grid;
   gap: 1em;
 
-  @media ${DEVISES.tablet} {
+  @media ${DEVICES.tablet} {
     display: none;
   }
 `;
@@ -13,7 +13,7 @@ export const MobileEntryWrapper = styled.div`
 export const SliderWrapper = styled.div`
   display: none;
 
-  @media ${DEVISES.tablet} {
+  @media ${DEVICES.tablet} {
     width: 80%;
     display: flex;
     flex-direction: column;

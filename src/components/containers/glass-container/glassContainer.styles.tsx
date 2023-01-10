@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { DEVISES, SIZES, COLORS } from "../../../constants";
+import { DEVICES, SIZES, COLORS } from "../../../constants";
 
 export const Glass = styled.div`
   background-color: rgba(255, 255, 255, 0.1);
@@ -24,7 +24,7 @@ export const GlassDetailsBox = styled(Glass)`
   align-items: center;
   color: hsl(${COLORS.yellow});
 
-  @media ${DEVISES.laptop} {
+  @media ${DEVICES.laptop} {
     flex-direction: column;
     gap: 1.5em;
     left: unset;
@@ -41,11 +41,11 @@ export const GlassForm = styled(Glass)`
     border-radius: 0.2rem;
   }
 
-  @media ${DEVISES.tablet} {
+  @media ${DEVICES.tablet} {
     padding: 2em;
   }
 
-  @media ${DEVISES.laptop} {
+  @media ${DEVICES.laptop} {
     padding: 2em;
   }
 `;

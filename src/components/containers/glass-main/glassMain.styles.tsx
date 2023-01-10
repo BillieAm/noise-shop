@@ -1,6 +1,6 @@
 import styled from "styled-components/macro";
 import { Glass } from "../glass-container/glassContainer.styles";
-import { DEVISES, SIZES } from "../../../constants";
+import { DEVICES, SIZES } from "../../../constants";
 
 export const MainGlass = styled(Glass)`
   position: relative;
@@ -12,12 +12,12 @@ export const MainGlass = styled(Glass)`
   justify-content: center;
   align-items: center;
 
-  @media ${DEVISES.tablet} {
+  @media ${DEVICES.tablet} {
     padding: 1.5em;
     padding-top: calc(${SIZES.regularFix} * 2.5);
   }
 
-  @media ${DEVISES.laptop} {
+  @media ${DEVICES.laptop} {
     padding: 2em;
     padding-top: calc(${SIZES.largeFix} * 2.5);
   }

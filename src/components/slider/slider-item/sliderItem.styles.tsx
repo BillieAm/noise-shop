@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { DEVISES } from "../../../constants";
+import { DEVICES } from "../../../constants";
 
 const BaseItem = styled.div`
   img {
@@ -16,7 +16,7 @@ export const MobileItem = styled(BaseItem)`
     aspect-ratio: 1.6 / 1;
   }
 
-  @media ${DEVISES.tablet} {
+  @media ${DEVICES.tablet} {
     img {
       aspect-ratio: 2.6 / 1;
     }

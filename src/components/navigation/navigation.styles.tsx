@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { DEVISES, SIZES } from "../../constants";
+import { DEVICES, SIZES } from "../../constants";
 import { ReactComponent as Logo } from "../../assets/Logo.svg";
 import { Link } from "react-router-dom";
 
@@ -24,7 +24,7 @@ export const NavLinks = styled.div`
   align-items: center;
   gap: ${SIZES.xLargeRel};
 
-  @media ${DEVISES.tablet} {
+  @media ${DEVICES.tablet} {
     gap: 2em;
   }
 `;

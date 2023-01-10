@@ -1,4 +1,4 @@
-export const DEVISES = {
+export const DEVICES = {
   mobileS: "(min-width: 320px)",
   mobileM: "(min-width: 375px)",
   mobileL: "(min-width: 425px)",

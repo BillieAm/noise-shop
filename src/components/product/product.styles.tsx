@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { DEVISES, SIZES } from "../../constants";
+import { DEVICES, SIZES } from "../../constants";
 
 import { Glass } from "../containers/glass-container/glassContainer.styles";
 
@@ -9,7 +9,7 @@ export const GlassWrapper = styled(Glass)`
   flex-direction: column;
   gap: ${SIZES.regularRel};
 
-  @media ${DEVISES.laptop} {
+  @media ${DEVICES.laptop} {
     flex-direction: row;
   }
 `;

@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { DEVISES, SIZES } from "../../constants";
+import { DEVICES, SIZES } from "../../constants";
 
 export const CategoriesWrapper = styled.div`
   width: 80%;
@@ -7,6 +7,6 @@ export const CategoriesWrapper = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: ${SIZES.regularRel};
 
-  @media ${DEVISES.laptop} {
+  @media ${DEVICES.laptop} {
   }
 `;
