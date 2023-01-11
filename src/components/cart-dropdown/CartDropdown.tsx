@@ -9,12 +9,13 @@ import Button from "../button/Button";
 
 import { Dropdown, StyledWhiteGlass } from "./cartDropdown.styles";
 
-function CartDropdown(): JSX.Element {
+function CartDropdown({ close }: { close: () => void }): JSX.Element {
   const { cartItems } = useContext(CartContext) as CartContextType;
   const navigate = useNavigate();
 
   const goToCheckoutHandler = () => {
     navigate("/cart");
+    close();
   };
 
   return (
