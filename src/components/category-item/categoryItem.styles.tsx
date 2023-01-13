@@ -17,6 +17,10 @@ export const GlassWrapper = styled(Glass)`
   border-radius: ${SIZES.xSmallFix};
   overflow: hidden;
   place-items: center;
+  transition: all 200ms ease-in;
+  &:hover {
+    background-color: hsl(${COLORS.white} / 0.4);
+  }
 
   h3 {
     width: 80%;
