@@ -1,4 +1,4 @@
-import React, { useState, useContext, useRef, useEffect } from "react";
+import { useState, useContext, useRef, useEffect } from "react";
 
 import { CartContext } from "../../contexts/cart.context";
 import { CartContextType } from "../../types/shop";
@@ -29,11 +29,11 @@ function CartIcon(): JSX.Element {
   };
 
   useEffect(() => {
-    document.addEventListener("click", handleClickOutside, true);
+    document.addEventListener("click", handleClickOutside);
     return () => {
-      document.removeEventListener("click", handleClickOutside, true);
+      document.removeEventListener("click", handleClickOutside);
     };
-  }, [dropdownRef]);
+  }, []);
 
   const cartItemsCounter = cartItems.reduce((acc, item) => {
     return item.quantity + acc;
