@@ -17,3 +17,12 @@ export const StyledCartSummary = styled.div`
     color: hsl(${COLORS.white});
   }
 `;
+
+export const StyledEmptyCart = styled.div`
+  font-size: ${SIZES.mediumRel};
+  text-align: center;
+  a {
+    color: hsl(${COLORS.blue});
+    text-decoration: underline;
+  }
+`;

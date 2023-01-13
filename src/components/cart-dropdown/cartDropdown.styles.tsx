@@ -4,6 +4,7 @@ import { Glass } from "../containers/glass-container/glassContainer.styles";
 import { BasicButton } from "../button/button.styles";
 
 export const Dropdown = styled.div`
+  min-width: 12em;
   font-size: ${SIZES.smallRel};
   position: absolute;
   right: 0;

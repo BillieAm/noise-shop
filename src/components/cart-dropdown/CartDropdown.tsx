@@ -23,7 +23,7 @@ function CartDropdown({ close }: { close: () => void }): JSX.Element {
       <StyledWhiteGlass>
         {cartItems.length
           ? cartItems.map(item => <CartItem key={item.id} item={item} />)
-          : "empty"}
+          : "Your cart is empty"}
         <hr />
         <p>
           {`Total:
