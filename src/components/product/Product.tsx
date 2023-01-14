@@ -7,7 +7,14 @@ import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 import { CartContext } from "../../contexts/cart.context";
 import { CartContextType } from "../../types/shop";
 
-import { GlassWrapper, ProductImage, ProductContent } from "./product.styles";
+import {
+  GlassWrapper,
+  ProductImage,
+  ProductContent,
+  ContentHeadings,
+  ContentBody,
+  ContentFooter
+} from "./product.styles";
 
 function Product() {
   const { addItemToCart } = useContext(CartContext) as CartContextType;
@@ -28,16 +35,20 @@ function Product() {
           <img src={productData.imageUrl} alt={productData.name} />
         </ProductImage>
         <ProductContent>
-          <h2>{productData.name}</h2>
-          <h3>{productData.subtitle}</h3>
-          <p>{productData.description}</p>
-          <p>${productData.price}</p>
-          <Button
-            buttonType={BUTTON_TYPE_CLASSES.basic}
-            onClick={addProductToCart}
-          >
-            Add to cart
-          </Button>
+          <ContentHeadings>
+            <h2>{productData.name}</h2>
+            <h3>{productData.subtitle}</h3>
+          </ContentHeadings>
+          <ContentBody>{productData.description}</ContentBody>
+          <ContentFooter>
+            <p>Price: ${productData.price}</p>
+            <Button
+              buttonType={BUTTON_TYPE_CLASSES.add}
+              onClick={addProductToCart}
+            >
+              Add to cart
+            </Button>
+          </ContentFooter>
         </ProductContent>
       </GlassWrapper>
     </>
