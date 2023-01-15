@@ -16,7 +16,7 @@ export const GlassWrapper = styled(Glass)`
 
 export const ProductImage = styled.div`
   @media ${DEVICES.laptop} {
-    min-width: 35em;
+    min-width: 35rem;
   }
 `;
 

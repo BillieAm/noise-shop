@@ -26,9 +26,9 @@ function Counter({ item }: CheckoutItemProps) {
 
   return (
     <StyledCounter>
-      <FontAwesomeIcon icon={faAngleLeft} onClick={incrementHandler} />
+      <FontAwesomeIcon icon={faAngleLeft} onClick={decrementHandler} />
       <span>{item.quantity}</span>
-      <FontAwesomeIcon icon={faAngleRight} onClick={decrementHandler} />
+      <FontAwesomeIcon icon={faAngleRight} onClick={incrementHandler} />
     </StyledCounter>
   );
 }

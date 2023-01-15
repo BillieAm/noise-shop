@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components/macro";
 import background from "./assets/app-background.jpg";
-import { DEVICES, SIZES } from "./constants";
+import { SIZES } from "./constants";
 
 export default createGlobalStyle`
 
@@ -38,11 +38,5 @@ select {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-@media ${DEVICES.tablet} {
-  body {
-    font-size: ${SIZES.mediumFix};
-  }
 }
 `;
