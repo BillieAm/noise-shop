@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
 
 import CartItem from "../cart-item/CartItem";
+import Counter from "../counter/Counter";
 
 import { StyledCartItem } from "./checkoutItem.styles";
 
@@ -12,15 +13,8 @@ interface CheckoutItemProps {
 }
 
 function CheckoutItem({ item }: CheckoutItemProps): JSX.Element {
-  const { addItemToCart, subtractCartItem, removeItemFromCheckout } =
-    useContext(CartContext) as CartContextType;
+  const { removeItemFromCheckout } = useContext(CartContext) as CartContextType;
 
-  const incrementHandler = () => {
-    addItemToCart(item);
-  };
-  const decrementHandler = () => {
-    subtractCartItem(item);
-  };
   const removeHandler = () => {
     removeItemFromCheckout(item);
   };
@@ -29,11 +23,7 @@ function CheckoutItem({ item }: CheckoutItemProps): JSX.Element {
     <StyledCartItem>
       <p onClick={removeHandler}>&#10005;</p>
       <CartItem key={item.id} item={item} />
-      <div>
-        <span onClick={incrementHandler}>+</span>
-        <span>{item.quantity}</span>
-        <span onClick={decrementHandler}>-</span>
-      </div>
+      <Counter item={item} />
     </StyledCartItem>
   );
 }
