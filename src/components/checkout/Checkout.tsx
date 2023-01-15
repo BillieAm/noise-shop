@@ -26,11 +26,11 @@ function Checkout(): JSX.Element {
           <hr />
           <StyledCartSummary>
             <span>
-              {`Total:
-          $${cartItems.reduce(
-            (acc, item) => item.price * item.quantity + acc,
-            0
-          )}`}
+              <strong>Total: </strong>
+              {`$${cartItems.reduce(
+                (acc, item) => item.price * item.quantity + acc,
+                0
+              )}`}
             </span>
             <Button>Checkout</Button>
           </StyledCartSummary>

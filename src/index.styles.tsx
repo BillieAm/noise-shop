@@ -4,10 +4,6 @@ import { DEVICES, SIZES } from "./constants";
 
 export default createGlobalStyle`
 
-/* ------------------- */
-/* Reset               */
-/* ------------------- */
-
 *,
 *::before,
 *::after {
@@ -44,15 +40,9 @@ a {
   color: inherit;
 }
 
-/* @media ${DEVICES.tablet} {
-  body {
-    font-size: ${SIZES.regularFix};
-  }
-}
-
-@media ${DEVICES.laptop} {
+@media ${DEVICES.tablet} {
   body {
     font-size: ${SIZES.mediumFix};
   }
-} */
+}
 `;

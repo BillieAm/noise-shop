@@ -3,8 +3,7 @@ import { SIZES } from "../../constants";
 
 export const StyledItem = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 5rem);
-  /* grid-gap: ${SIZES.smallRel} ${SIZES.smallRel}; */
+  grid-template-columns: 5rem auto;
   margin: ${SIZES.smallRel};
 `;
 
@@ -16,6 +15,5 @@ export const StyledImage = styled.img`
 `;
 
 export const StyledItemInfo = styled.div`
-  grid-column: span 2;
   align-self: center;
 `;

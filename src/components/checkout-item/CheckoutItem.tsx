@@ -1,10 +1,13 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+
 import CartItem from "../cart-item/CartItem";
 import Counter from "../counter/Counter";
 
-import { StyledCartItem } from "./checkoutItem.styles";
+import { StyledCartItem, StyledLeftSid } from "./checkoutItem.styles";
 
 import { CartContextType, ICartItem } from "../../types/shop";
 
@@ -21,8 +24,10 @@ function CheckoutItem({ item }: CheckoutItemProps): JSX.Element {
 
   return (
     <StyledCartItem>
-      <p onClick={removeHandler}>&#10005;</p>
-      <CartItem key={item.id} item={item} />
+      <StyledLeftSid>
+        <FontAwesomeIcon icon={faTrash} onClick={removeHandler} />
+        <CartItem key={item.id} item={item} />
+      </StyledLeftSid>
       <Counter item={item} />
     </StyledCartItem>
   );

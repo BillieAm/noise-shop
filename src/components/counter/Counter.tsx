@@ -1,6 +1,11 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+
+import { StyledCounter } from "./counter.styles";
+
 import { CartContextType, ICartItem } from "../../types/shop";
 
 interface CheckoutItemProps {
@@ -20,11 +25,11 @@ function Counter({ item }: CheckoutItemProps) {
   };
 
   return (
-    <div>
-      <span onClick={incrementHandler}>+</span>
+    <StyledCounter>
+      <FontAwesomeIcon icon={faAngleLeft} onClick={incrementHandler} />
       <span>{item.quantity}</span>
-      <span onClick={decrementHandler}>-</span>
-    </div>
+      <FontAwesomeIcon icon={faAngleRight} onClick={decrementHandler} />
+    </StyledCounter>
   );
 }
 

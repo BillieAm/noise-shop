@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { SIZES } from "../../constants";
+import { DEVICES, SIZES } from "../../constants";
 import { Glass } from "../containers/glass-container/glassContainer.styles";
 
 export const StyledHeader = styled.div`
@@ -8,6 +8,10 @@ export const StyledHeader = styled.div`
   text-transform: capitalize;
   position: absolute;
   top: -${SIZES.smallRel};
+
+  @media ${DEVICES.tablet} {
+    font-size: ${SIZES.regularRel};
+  }
 
   ${Glass} {
     background-color: rgba(255, 0, 0, 0.3);
