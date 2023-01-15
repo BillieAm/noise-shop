@@ -30,7 +30,7 @@ function ProductCard({ product }: { product: IProduct }): JSX.Element {
         <Link to={pathBeautifier(name)} state={product}>
           <CardImg src={imageUrl} alt={name} />
           <CardInfo>
-            <h4>{name}</h4>
+            <h3>{name}</h3>
             <Price>${price}</Price>
           </CardInfo>
         </Link>

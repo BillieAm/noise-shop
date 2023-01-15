@@ -10,8 +10,8 @@ export const StyledCartIconCounter = styled.span`
   width: 1.5em;
   height: 1.5em;
   position: absolute;
-  bottom: 0;
-  left: -50%;
+  bottom: 3px;
+  left: -30%;
   color: hsl(${COLORS.white});
   background-color: hsl(${COLORS.blue});
   border-radius: 50%;

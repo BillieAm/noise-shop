@@ -7,6 +7,10 @@ export const NavigationContainer = styled.nav`
   padding: 1em 0.5em 1.5em;
   display: flex;
   justify-content: space-between;
+
+  @media ${DEVICES.tablet} {
+    font-size: ${SIZES.mediumFix};
+  }
 `;
 
 export const StyledLogo = styled(Logo)`

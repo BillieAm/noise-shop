@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { SIZES, COLORS } from "../../constants";
+import { DEVICES, SIZES, COLORS } from "../../constants";
 
 export const BasicButton = styled.button`
   font-weight: 700;
@@ -11,6 +11,10 @@ export const BasicButton = styled.button`
   text-transform: capitalize;
   white-space: nowrap;
   transition: all 100ms ease-in-out;
+
+  @media ${DEVICES.tablet} {
+    font-size: ${SIZES.regularFix};
+  }
 `;
 
 export const AddButton = styled(BasicButton)`
@@ -33,8 +37,13 @@ export const InfoButton = styled(BasicButton)`
 
 export const FormButton = styled(BasicButton)`
   width: 100%;
+  background-color: hsl(${COLORS.lightYellow} / 0.5);
+  font-size: 1rem;
   font-weight: 400;
   border-radius: 0.2rem;
-  padding: 0.8em;
+  padding: 0.7em;
   margin: 1em 0;
+  &:hover {
+    background-color: hsl(${COLORS.lightYellow});
+  }
 `;
