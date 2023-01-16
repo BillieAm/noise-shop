@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 import { SIZES, COLORS } from "../../constants";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const StyledCartIconContainer = styled.div`
   position: relative;
@@ -18,4 +19,8 @@ export const StyledCartIconCounter = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+export const StyledFontAwesomeIcon = styled(FontAwesomeIcon)`
+  cursor: pointer;
 `;

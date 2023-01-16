@@ -16,8 +16,8 @@ export const Dropdown = styled.div`
     background-color: hsl(${COLORS.lightYellow});
     border: 2px solid hsl(${COLORS.dark});
     margin-top: ${SIZES.smallRel};
-    padding: ${SIZES.smallRel};
-    border-radius: ${SIZES.mediumFix};
+    padding: 0.5em;
+    border-radius: 0.3rem;
   }
 `;
 

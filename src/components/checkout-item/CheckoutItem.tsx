@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { StyledFontAwesomeIcon } from "./checkoutItem.styles";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 import CartItem from "../cart-item/CartItem";
@@ -25,7 +25,7 @@ function CheckoutItem({ item }: CheckoutItemProps): JSX.Element {
   return (
     <StyledCartItem>
       <StyledLeftSid>
-        <FontAwesomeIcon icon={faTrash} onClick={removeHandler} />
+        <StyledFontAwesomeIcon icon={faTrash} onClick={removeHandler} />
         <CartItem key={item.id} item={item} />
       </StyledLeftSid>
       <Counter item={item} />
