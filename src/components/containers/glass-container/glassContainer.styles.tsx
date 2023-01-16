@@ -41,6 +41,10 @@ export const GlassForm = styled(Glass)`
     border-radius: 0.2rem;
   }
 
+  a {
+    color: hsl(${COLORS.blue});
+  }
+
   @media ${DEVICES.tablet} {
     padding: 2em;
   }
