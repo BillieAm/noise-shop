@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart.context";
+import { REDUCER_ACTION_TYPE } from "../../reducers/cart.reducer";
 
 import { StyledFontAwesomeIcon } from "./counter.styles";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
@@ -13,15 +14,13 @@ interface CheckoutItemProps {
 }
 
 function Counter({ item }: CheckoutItemProps) {
-  const { addItemToCart, subtractCartItem } = useContext(
-    CartContext
-  ) as CartContextType;
+  const { dispatch } = useContext(CartContext) as CartContextType;
 
   const incrementHandler = () => {
-    addItemToCart(item);
+    dispatch({ type: REDUCER_ACTION_TYPE.ADD, item });
   };
   const decrementHandler = () => {
-    subtractCartItem(item);
+    dispatch({ type: REDUCER_ACTION_TYPE.SUBTRACT, item });
   };
 
   return (

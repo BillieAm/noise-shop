@@ -21,9 +21,7 @@ export type CategoryContextType = Category[];
 
 export type CartContextType = {
   cartItems: ICartItem[];
-  addItemToCart(productToAdd: IProduct | ICartItem): void;
-  subtractCartItem(cartItem: ICartItem): void;
-  removeItemFromCheckout(cartItemToRemove: ICartItem): void;
+  dispatch: React.Dispatch<ReducerAction>;
 };
 
 type CurrentUser = {
@@ -34,7 +32,3 @@ export type UserContextType = {
   currentUser: CurrentUser | null;
   setCurrentUser(user: User): void;
 };
-
-/* 
-{id: 3, name: "abc", imageUrl: "hello", price: 34, category: "bundles", quantity: 2}
-*/

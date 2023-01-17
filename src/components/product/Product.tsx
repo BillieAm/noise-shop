@@ -5,6 +5,8 @@ import PageHeader from "../page-header/PageHeader";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/Button";
 
 import { CartContext } from "../../contexts/cart.context";
+import { REDUCER_ACTION_TYPE } from "../../reducers/cart.reducer";
+
 import { CartContextType } from "../../types/shop";
 
 import {
@@ -17,13 +19,13 @@ import {
 } from "./product.styles";
 
 function Product() {
-  const { addItemToCart } = useContext(CartContext) as CartContextType;
+  const { dispatch } = useContext(CartContext) as CartContextType;
   const location = useLocation();
   const productData = location.state;
   console.log(productData);
 
   const addProductToCart = () => {
-    addItemToCart(productData);
+    dispatch({ type: REDUCER_ACTION_TYPE.ADD, item: productData });
   };
 
   return (
