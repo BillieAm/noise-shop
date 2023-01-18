@@ -1,38 +1,27 @@
 # Noise Shop
 
-## Demo E-commerce for audio plug-ins
+## Demo E-commerce for audio plugins
 
-## Table of Contents
+This project was meant to serve as an experimental sandbox to strengthen my React and Typescript skills and to learn new technologies.
 
-- [Overview](#overview)
-- [Built With](#built-with)
-- [Features](#features)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
+As of now, the project has been built with **React**, **Typescript**, **Firebase**, and **Styled-Components**.
+However, I intend to add more features such as **Storybook**, **Google OAuth**, and **Stripe**, and optimize performance.
 
-## Overview
+Among the technologies and skills I have acquired and improved are:
 
-<!-- TODO: Add a screenshot of the live project.
-    1. Link to a 'live demo.'
-    2. Describe your overall experience in a couple of sentences.
-    3. List a few specific technical things that you learned or improved on.
-    4. Share any other tips or guidance for others attempting this or something similar.
- -->
+- **React** - routers, context, reducers, etc.
+- **Typescript** - generics, enums, types and interfaces, etc.
+- **Firebase** - for data storage
+- **Styled-Components** - for CSS-in-Javascript
+- **Code refactoring**
 
 For the live project [Click here](https://magenta-otter-fe6f1a.netlify.app/)
 
-### Built With
+<br>
 
-<!-- TODO: List any MAJOR libraries/frameworks (e.g. React, Tailwind) with links to their homepages. -->
+Sources that have some contribution to this project:
 
-## Features
-
-<!-- TODO: List what specific 'user problems' that this application solves. -->
-
-## Contact
-
-<!-- TODO: Include icons and links to your RELEVANT, PROFESSIONAL 'DEV-ORIENTED' social media. LinkedIn and dev.to are minimum. -->
-
-## Acknowledgements
-
-<!-- TODO: List any blog posts, tutorials or plugins that you may have used to complete the project. Only list those that had a significant impact. Obviously, we all 'Google' stuff while working on our things, but maybe something in particular stood out as a 'major contributor' to your skill set for this project. -->
+- Udemy - Complete React Developer in 2023 (w/ Redux, Hooks, GraphQL)
+- Udemy - The Modern React Bootcamp (Hooks, Context, NextJS, Router)
+- Udemy - Mastering TypeScript
+- And lots of articles, youtube, and stack-overflow 🙂
